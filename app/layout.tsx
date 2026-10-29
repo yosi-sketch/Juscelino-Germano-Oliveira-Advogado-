@@ -28,69 +28,67 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0b0f17",
+  themeColor: "#190d08",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://giliardadv.com.br"),
+  metadataBase: new URL("https://alesaniamenezes.adv.br"),
   title:
-    "Ronaldo Giliard Advocacia e Consultoria Jurídica | Cível & Criminal · Dr. Ronaldo Giliard · OAB/MG 218.682 · 5,0 ★ (35 avaliações) · Campo Belo - MG",
+    "Escritório de Advocacia Alesânia Menezes | Dra. Alesânia Menezes · Família, Cível & Direito Público · Pres. Com. Mulher Advogada OAB/MG · 5,0 ★ (31 avaliações) · Pompéu - MG",
   description:
-    "Ronaldo Giliard Advocacia e Consultoria Jurídica — Liderado pelo Dr. Ronaldo Giliard (OAB/MG 218.682), Bacharel em Direito pela PUC Minas Arcos-MG. Atuação de excelência e alta agilidade em Direito Cível, Defesa Criminal e Consultoria Jurídica. Sede na R. João Pinheiro, 356 - Centro, Campo Belo - MG. Atendimento presencial e online em todo o Brasil. WhatsApp: (35) 99745-8013.",
+    "Escritório De Advocacia Alesânia Menezes — Liderado pela Dra. Alesânia Menezes, Advogada com Pós-graduação em Direito Público e Direito das Mulheres, e Presidente da Comissão da Mulher Advogada da OAB/MG. Atuação de excelência e acolhimento humanizado em Direito de Família e Sucessões, Direito Cível, Direito das Mulheres e Consultoria Jurídica. Sede na R. Olegário Maciel, 182 - Centro, Pompéu - MG. Atendimento presencial e digital para todo o Brasil. WhatsApp: (37) 99961-7913.",
   keywords: [
-    "Ronaldo Giliard Advocacia",
-    "Ronaldo Giliard",
-    "Dr Ronaldo Giliard",
-    "Ronaldo Giliard Advogado",
-    "Advogado em Campo Belo MG",
-    "Advocacia Campo Belo Minas Gerais",
-    "Advogado Criminalista Campo Belo",
-    "Advogado Cível Campo Belo",
-    "Direito Penal Campo Belo",
-    "Defesa Criminal Campo Belo",
-    "Flagrante e Audiência de Custódia Campo Belo",
-    "Indenização e Danos Morais Campo Belo",
-    "Direito de Família e Divórcio Campo Belo",
-    "Inventário em Cartório Campo Belo",
-    "Consultoria Jurídica Campo Belo MG",
-    "OAB MG 218682",
-    "PUC Minas Arcos Direito",
-    "Melhor Advogado Campo Belo",
-    "Advocacia online Minas Gerais e Brasil",
+    "Alesânia Menezes Advocacia",
+    "Escritório de Advocacia Alesânia Menezes",
+    "Alesânia Menezes",
+    "Dra Alesânia Menezes",
+    "Advogada em Pompéu MG",
+    "Advocacia Pompéu Minas Gerais",
+    "Direito de Família Pompéu",
+    "Divórcio em Cartório Pompéu",
+    "Pensão Alimentícia Pompéu MG",
+    "Inventário em Cartório Pompéu",
+    "Direito das Mulheres",
+    "Comissão da Mulher Advogada OAB MG",
+    "Direito Público Pompéu",
+    "Advogado Cível Pompéu",
+    "Melhor Advogado Pompéu MG",
+    "Consultoria Jurídica Pompéu",
+    "Advocacia online Minas Gerais",
   ],
-  authors: [{ name: "Ronaldo Giliard Advocacia e Consultoria Jurídica - Dr. Ronaldo Giliard" }],
-  creator: "Ronaldo Giliard Advocacia",
-  publisher: "Ronaldo Giliard Advocacia",
+  authors: [{ name: "Escritório De Advocacia Alesânia Menezes - Dra. Alesânia Menezes" }],
+  creator: "Escritório De Advocacia Alesânia Menezes",
+  publisher: "Escritório De Advocacia Alesânia Menezes",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=rg1", sizes: "any" },
-      { url: "/icon-32x32.png?v=rg1", type: "image/png", sizes: "32x32" },
-      { url: "/icon-16x16.png?v=rg1", type: "image/png", sizes: "16x16" },
-      { url: "/icon-48x48.png?v=rg1", type: "image/png", sizes: "48x48" },
-      { url: "/icon.png?v=rg1", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=am1", sizes: "any" },
+      { url: "/icon-32x32.png?v=am1", type: "image/png", sizes: "32x32" },
+      { url: "/icon-16x16.png?v=am1", type: "image/png", sizes: "16x16" },
+      { url: "/icon-48x48.png?v=am1", type: "image/png", sizes: "48x48" },
+      { url: "/icon.png?v=am1", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/icon-32x32.png?v=rg1",
-    apple: [{ url: "/apple-icon.png?v=rg1", sizes: "180x180" }],
+    shortcut: "/icon-32x32.png?v=am1",
+    apple: [{ url: "/apple-icon.png?v=am1", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://giliardadv.com.br",
+    url: "https://alesaniamenezes.adv.br",
     title:
-      "Ronaldo Giliard Advocacia e Consultoria Jurídica | Cível & Criminal · 5,0 ★ (35 avaliações)",
+      "Escritório de Advocacia Alesânia Menezes | Dra. Alesânia Menezes · 5,0 ★ (31 avaliações no Google)",
     description:
-      "Defesa jurídica estratégica, ágil e resolutiva em Direito Cível e Criminal. Dr. Ronaldo Giliard (OAB/MG 218.682). Sede em Campo Belo - MG e atendimento digital nacional. WhatsApp: (35) 99745-8013.",
-    siteName: "Ronaldo Giliard Advocacia",
+      "Advocacia de excelência, ética e atendimento humanizado em Direito de Família, Sucessões, Cível e Direito Público. Pres. Comissão da Mulher Advogada OAB/MG. Sede em Pompéu - MG. WhatsApp: (37) 99961-7913.",
+    siteName: "Escritório De Advocacia Alesânia Menezes",
     images: [
       {
-        url: "/logo.png",
+        url: "/logo-badge.png",
         width: 1024,
-        height: 512,
-        alt: "Ronaldo Giliard Advocacia e Consultoria Jurídica — Cível e Criminal",
+        height: 1024,
+        alt: "Escritório De Advocacia Alesânia Menezes — Advocacia Especializada",
       },
     ],
   },
@@ -104,36 +102,33 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Ronaldo Giliard Advocacia e Consultoria Jurídica - Dr. Ronaldo Giliard",
-    alternateName: "Dr. Ronaldo Giliard Advogado | Ronaldo Giliard Advocacia Cível e Criminal",
-    telephone: "+55-35-99745-8013",
-    url: "https://giliardadv.com.br",
-    image: "https://giliardadv.com.br/logo.png",
+    name: "Escritório De Advocacia Alesânia Menezes",
+    alternateName: "Dra. Alesânia Menezes Advocacia Especializada",
+    telephone: "+55-37-99961-7913",
+    url: "https://tinyurl.com/advocacia-alesania-menezes-wpp",
+    image: "https://alesaniamenezes.adv.br/logo-badge.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. João Pinheiro, 356 - Centro",
-      addressLocality: "Campo Belo",
+      streetAddress: "R. Olegário Maciel, 182 - CENTRO",
+      addressLocality: "Pompéu",
       addressRegion: "MG",
-      postalCode: "37270-000",
+      postalCode: "35640-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "35",
+      reviewCount: "31",
     },
     areaServed: [
-      "Campo Belo",
-      "Candeias",
-      "Cristais",
-      "Santana do Jacaré",
-      "Aguanil",
-      "Perdões",
-      "Boa Esperança",
-      "Lavras",
-      "Formiga",
-      "Arcos",
+      "Pompéu",
+      "Curvelo",
+      "Sete Lagoas",
+      "Martinho Campos",
+      "Abaeté",
+      "Felixlândia",
+      "Pitangui",
       "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
@@ -148,14 +143,15 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:00",
+        opens: "09:00",
         closes: "18:00",
       },
     ],
     sameAs: [
-      "https://wa.me/5535997458013",
-      "https://www.instagram.com/giliardadv/",
-      "https://www.google.com/search?q=Ronaldo+Giliard+Advocacia+e+Consultoria+Jur%C3%ADdica%0ACampo+Belo+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
+      "https://wa.me/5537999617913",
+      "https://tinyurl.com/advocacia-alesania-menezes-wpp",
+      "https://www.instagram.com/alesaniamenezes/",
+      "https://www.google.com/search?q=Ales%C3%A2nia+Menezes+%E2%80%94+Advocacia%0APomp%C3%A9u+%C2%B7+MG",
     ],
   };
 
@@ -166,19 +162,19 @@ export default function RootLayout({
     >
       <head>
         {/* Favicon & Web App Icons with Cache Busting */}
-        <link rel="icon" href="/favicon.ico?v=rg1" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=rg1" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=rg1" />
-        <link rel="icon" type="image/png" sizes="48x48" href="/icon-48x48.png?v=rg1" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/icon.png?v=rg1" />
-        <link rel="shortcut icon" href="/favicon.ico?v=rg1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=rg1" />
+        <link rel="icon" href="/favicon.ico?v=am1" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=am1" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=am1" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/icon-48x48.png?v=am1" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon.png?v=am1" />
+        <link rel="shortcut icon" href="/favicon.ico?v=am1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=am1" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased min-h-screen selection:bg-[#0f172a] selection:text-[#ffffff] bg-[#f8fafc] text-[#0b0f17]">
+      <body className="antialiased min-h-screen selection:bg-[#361a10] selection:text-[#f9efcb] bg-[#fdfbf7] text-[#1a0f0a]">
         {children}
       </body>
     </html>
