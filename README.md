@@ -1,18 +1,18 @@
-# Escritório De Advocacia Alesânia Menezes — Landing Page Oficial
-## Dra. Alesânia Menezes · Pós-grad. Direito Público e Direito das Mulheres · Pres. Comissão da Mulher Advogada OAB/MG · Avaliação 5,0 ★ no Google (31 avaliações)
+# Juscelino Germano Oliveira — Advogado | Landing Page Oficial
+## Dr. Juscelino Germano Oliveira · Família, Consumidor & Servidores Públicos · Avaliação 5,0 ★ no Google (28 avaliações) · Bocaiúva - MG
 
-Landing page de alta autoridade, conversão e presença institucional para o **Escritório De Advocacia Alesânia Menezes**, referência em **Direito de Família & Sucessões, Direito das Mulheres, Direito Cível e Direito Público**, com sede na **R. Olegário Maciel, 182 - CENTRO, Pompéu - MG, 35640-000** e atendimento online seguro para todo o Brasil.
+Landing page de alta autoridade, conversão e presença institucional para **Juscelino Germano Oliveira — Advogado**, referência em **Direito de Família & Sucessões, Direito do Consumidor e Servidores Públicos**, com sede na **Rua Luís Inácio Silveira, n° 1385 - Centro, Bocaiúva - MG, CEP 39390-000** e atendimento online seguro para todo o Brasil.
 
 ## Principais Recursos
 
-- **Identidade Visual Fiel ao Logo:** Extraída diretamente do novo logotipo oficial em medalhão circular de alto relevo com fundo em cacau escuro / espresso profundo (`#190d08`, `#26130b`, `#361a10`), monograma "AM" e tipografia lapidar em Ouro Champanhe Metálico (`#f9efcb`, `#ddc89d`, `#c5a059`, `#b38e46`), combinada com o toque caloroso de terracota da parede do escritório (`#b86b5a`, `#8a4d35`) e canvas suave em alabastro cashmere (`#fdfbf7`, `#f7f3eb`, `#ffffff`).
+- **Identidade Visual Fiel ao Logo & Fachada:** Paleta extraída diretamente do novo logo oficial em ouro nobre metálico (`#f9efcb`, `#f1ce89`, `#c89a47`, `#b88836`, `#8a611e`) sobre o contraste escuro e sofisticado do ônix/grafite (`#0a0c0f`, `#12151a`, `#181c22`, `#222731`), ecoando a arquitetura da sede física e o emblema circular estilizado "JG", combinados com fundo suave e legível em alabastro nobre (`#faf9f5`, `#f3f1ea`, `#ffffff`).
 - **Tipografia Nobre & Harmônica:** Combinação de `Cinzel`, `Playfair Display` e `Plus Jakarta Sans`.
-- **Áreas de Atuação Especializadas:** 6 seções completas com modal interativo detalhado (Direito de Família & Sucessões, Direito das Mulheres & Proteção Especializada, Direito Cível & Indenizações, Direito Público & Defesa Administrativa, Direito do Consumidor & Defesa Patrimonial, e Consultoria Preventiva & Soluções Extrajudiciais).
-- **Liderança & Especialização:** Dra. Alesânia Menezes é Pós-graduada em Direito Público e Direito das Mulheres, e Presidente da Comissão da Mulher Advogada da OAB/MG (Comarca de Pompéu).
-- **Prova Social Google 5,0 ★:** 31 avaliações autênticas de clientes de Pompéu - MG e região, com filtros de depoimentos por categoria.
-- **Total Conformidade OAB:** Rigorosamente alinhado ao Código de Ética e Disciplina da OAB e ao Provimento nº 205/2021.
-- **Conversão Otimizada:** Botões de WhatsApp com mensagens pré-formatadas direcionadas ao número oficial: (37) 99961-7913.
-- **Favicon Multi-resolução:** Favicon e web app icons de alto contraste em todas as resoluções (16x16, 32x32, 48x48, 180x180, 512x512) com o medalhão AM devidamente aplicado na aba do navegador.
+- **Pilares de Atuação Especializados:** Direito de Família & Sucessões, Direito do Consumidor & Operadoras, Direito dos Servidores Públicos (PAD), Direito Cível & Ações Indenizatórias e Consultoria Jurídica Preventiva.
+- **Sede Física em Bocaiúva - MG:** Foto em alta resolução da fachada contemporânea na Rua Luís Inácio Silveira, 1385, com botões para rotas no Google Maps e agendamento presencial.
+- **Prova Social Google 5,0 ★ (28 avaliações):** Depoimentos reais de clientes do Google Maps (Danielle Oliveira, Thamires Meiriane, Heberth, Carlos Roberto, Fernanda Pereira, Larissa Vieira, Silvanira, Aliny, Carolayne, Gregório), com filtros por categoria e respostas atenciosas do Dr. Juscelino.
+- **Total Conformidade OAB:** Rigorosamente alinhado ao Código de Ética e Disciplina da OAB.
+- **Conversão Otimizada no WhatsApp:** CTAs com mensagens personalizadas direcionadas ao WhatsApp oficial: (38) 99849-1504 / (38) 99847-6504.
+- **Favicon Multi-resolução:** Favicon e web app icons de alto contraste em todas as resoluções (16x16, 32x32, 48x48, 180x180, 512x512) com o medalhão dourado JG perfeitamente visível na aba do navegador.
 
 ## Como Executar
 

@@ -28,67 +28,67 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#190d08",
+  themeColor: "#0a0c0f",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alesaniamenezes.adv.br"),
+  metadataBase: new URL("https://juscelinogermano.adv.br"),
   title:
-    "Escritório de Advocacia Alesânia Menezes | Dra. Alesânia Menezes · Família, Cível & Direito Público · Pres. Com. Mulher Advogada OAB/MG · 5,0 ★ (31 avaliações) · Pompéu - MG",
+    "Juscelino Germano Oliveira — Advogado | Família, Consumidor & Servidores · 5,0 ★ (28 avaliações no Google) · Bocaiúva - MG",
   description:
-    "Escritório De Advocacia Alesânia Menezes — Liderado pela Dra. Alesânia Menezes, Advogada com Pós-graduação em Direito Público e Direito das Mulheres, e Presidente da Comissão da Mulher Advogada da OAB/MG. Atuação de excelência e acolhimento humanizado em Direito de Família e Sucessões, Direito Cível, Direito das Mulheres e Consultoria Jurídica. Sede na R. Olegário Maciel, 182 - Centro, Pompéu - MG. Atendimento presencial e digital para todo o Brasil. WhatsApp: (37) 99961-7913.",
+    "Juscelino Germano Oliveira — Advogado em Bocaiúva - MG. Atuação dedicada e humanizada em Direito de Família, Direito do Consumidor e Servidores Públicos. Sede na Rua Luís Inácio Silveira, n° 1385 - Centro, Bocaiúva - MG. Nota máxima 5,0 estrelas no Google com 28 avaliações. Atendimento presencial e online para todo o Brasil. WhatsApp: (38) 99849-1504.",
   keywords: [
-    "Alesânia Menezes Advocacia",
-    "Escritório de Advocacia Alesânia Menezes",
-    "Alesânia Menezes",
-    "Dra Alesânia Menezes",
-    "Advogada em Pompéu MG",
-    "Advocacia Pompéu Minas Gerais",
-    "Direito de Família Pompéu",
-    "Divórcio em Cartório Pompéu",
-    "Pensão Alimentícia Pompéu MG",
-    "Inventário em Cartório Pompéu",
-    "Direito das Mulheres",
-    "Comissão da Mulher Advogada OAB MG",
-    "Direito Público Pompéu",
-    "Advogado Cível Pompéu",
-    "Melhor Advogado Pompéu MG",
-    "Consultoria Jurídica Pompéu",
+    "Juscelino Germano Oliveira Advogado",
+    "Juscelino Germano Oliveira",
+    "Juscelino Oliveira Advogado Bocaiúva",
+    "Advogado em Bocaiúva MG",
+    "Advocacia Bocaiúva Minas Gerais",
+    "Direito de Família Bocaiúva",
+    "Divórcio Bocaiúva",
+    "Pensão Alimentícia Bocaiúva MG",
+    "Inventário em Cartório Bocaiúva",
+    "Direito do Consumidor Bocaiúva",
+    "Advogado Servidores Públicos Bocaiúva",
+    "Advogado Cível Bocaiúva",
+    "Melhor Advogado Bocaiúva MG",
+    "Consultoria Jurídica Bocaiúva",
     "Advocacia online Minas Gerais",
+    "Dr Juscelino Germano",
+    "OAB MG Bocaiúva",
   ],
-  authors: [{ name: "Escritório De Advocacia Alesânia Menezes - Dra. Alesânia Menezes" }],
-  creator: "Escritório De Advocacia Alesânia Menezes",
-  publisher: "Escritório De Advocacia Alesânia Menezes",
+  authors: [{ name: "Juscelino Germano Oliveira — Advogado" }],
+  creator: "Juscelino Germano Oliveira",
+  publisher: "Juscelino Germano Oliveira — Advogado",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=am1", sizes: "any" },
-      { url: "/icon-32x32.png?v=am1", type: "image/png", sizes: "32x32" },
-      { url: "/icon-16x16.png?v=am1", type: "image/png", sizes: "16x16" },
-      { url: "/icon-48x48.png?v=am1", type: "image/png", sizes: "48x48" },
-      { url: "/icon.png?v=am1", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=jg1", sizes: "any" },
+      { url: "/icon-32x32.png?v=jg1", type: "image/png", sizes: "32x32" },
+      { url: "/icon-16x16.png?v=jg1", type: "image/png", sizes: "16x16" },
+      { url: "/icon-48x48.png?v=jg1", type: "image/png", sizes: "48x48" },
+      { url: "/icon.png?v=jg1", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/icon-32x32.png?v=am1",
-    apple: [{ url: "/apple-icon.png?v=am1", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=jg1",
+    apple: [{ url: "/apple-icon.png?v=jg1", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://alesaniamenezes.adv.br",
+    url: "https://juscelinogermano.adv.br",
     title:
-      "Escritório de Advocacia Alesânia Menezes | Dra. Alesânia Menezes · 5,0 ★ (31 avaliações no Google)",
+      "Juscelino Germano Oliveira — Advogado | 5,0 ★ (28 avaliações no Google)",
     description:
-      "Advocacia de excelência, ética e atendimento humanizado em Direito de Família, Sucessões, Cível e Direito Público. Pres. Comissão da Mulher Advogada OAB/MG. Sede em Pompéu - MG. WhatsApp: (37) 99961-7913.",
-    siteName: "Escritório De Advocacia Alesânia Menezes",
+      "Advocacia dedicada, ética e com atendimento humanizado em Direito de Família, Consumidor e Servidores Públicos. Sede em Bocaiúva - MG. WhatsApp: (38) 99849-1504.",
+    siteName: "Juscelino Germano Oliveira — Advogado",
     images: [
       {
-        url: "/logo-badge.png",
+        url: "/logo.png",
         width: 1024,
-        height: 1024,
-        alt: "Escritório De Advocacia Alesânia Menezes — Advocacia Especializada",
+        height: 367,
+        alt: "Juscelino Germano Oliveira — Advogado",
       },
     ],
   },
@@ -102,34 +102,33 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Escritório De Advocacia Alesânia Menezes",
-    alternateName: "Dra. Alesânia Menezes Advocacia Especializada",
-    telephone: "+55-37-99961-7913",
-    url: "https://tinyurl.com/advocacia-alesania-menezes-wpp",
-    image: "https://alesaniamenezes.adv.br/logo-badge.png",
+    name: "Juscelino Germano Oliveira — Advogado",
+    alternateName: "Dr. Juscelino Germano Oliveira Advocacia",
+    telephone: "+55-38-99849-1504",
+    url: "https://juscelinogermano.adv.br",
+    image: "https://juscelinogermano.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Olegário Maciel, 182 - CENTRO",
-      addressLocality: "Pompéu",
+      streetAddress: "Rua Luís Inácio Silveira, n° 1385 - Centro",
+      addressLocality: "Bocaiúva",
       addressRegion: "MG",
-      postalCode: "35640-000",
+      postalCode: "39390-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "31",
+      reviewCount: "28",
     },
     areaServed: [
-      "Pompéu",
-      "Curvelo",
-      "Sete Lagoas",
-      "Martinho Campos",
-      "Abaeté",
-      "Felixlândia",
-      "Pitangui",
-      "Belo Horizonte",
+      "Bocaiúva",
+      "Montes Claros",
+      "Engenheiro Navarro",
+      "Francisco Dumont",
+      "Olhos-d'Água",
+      "Glaucilândia",
+      "Norte de Minas",
       "Minas Gerais",
       "Brasil",
     ],
@@ -148,10 +147,10 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://wa.me/5537999617913",
-      "https://tinyurl.com/advocacia-alesania-menezes-wpp",
-      "https://www.instagram.com/alesaniamenezes/",
-      "https://www.google.com/search?q=Ales%C3%A2nia+Menezes+%E2%80%94+Advocacia%0APomp%C3%A9u+%C2%B7+MG",
+      "https://wa.me/5538998491504",
+      "https://www.instagram.com/juscelinoadv",
+      "https://www.instagram.com/ojuscelinogermano/",
+      "https://www.google.com/search?q=Juscelino+Germano+Oliveira+%E2%80%94+Advogado%0ABocai%C3%BAva+%C2%B7+MG",
     ],
   };
 
@@ -162,19 +161,19 @@ export default function RootLayout({
     >
       <head>
         {/* Favicon & Web App Icons with Cache Busting */}
-        <link rel="icon" href="/favicon.ico?v=am1" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=am1" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=am1" />
-        <link rel="icon" type="image/png" sizes="48x48" href="/icon-48x48.png?v=am1" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/icon.png?v=am1" />
-        <link rel="shortcut icon" href="/favicon.ico?v=am1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=am1" />
+        <link rel="icon" href="/favicon.ico?v=jg1" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=jg1" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=jg1" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/icon-48x48.png?v=jg1" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon.png?v=jg1" />
+        <link rel="shortcut icon" href="/favicon.ico?v=jg1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=jg1" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased min-h-screen selection:bg-[#361a10] selection:text-[#f9efcb] bg-[#fdfbf7] text-[#1a0f0a]">
+      <body className="antialiased min-h-screen selection:bg-[#181c22] selection:text-[#f1ce89] bg-[#faf9f5] text-[#111317]">
         {children}
       </body>
     </html>
