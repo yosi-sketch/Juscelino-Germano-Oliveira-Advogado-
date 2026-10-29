@@ -32,39 +32,42 @@ import {
   MessageCircle,
   Gavel,
   BadgeCheck,
+  Zap,
+  Siren,
+  FileSpreadsheet,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-// Client & Firm Information — Agenor Lucena Advocacia / Dr. Alexandre Abreu Lúcio
-const WHATSAPP_NUMBER = "5537999710510";
-const PHONE_DISPLAY = "(37) 99971-0510";
-const EMAIL_CONTACT = "contato@agenorlucena.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/agenor_lucena/";
-const INSTAGRAM_HANDLE = "@agenor_lucena";
-const INSTAGRAM_STATS = "1.669 seguidores · 39 posts";
+// Client & Firm Information — Ronaldo Giliard Advocacia e Consultoria Jurídica
+const WHATSAPP_NUMBER = "5535997458013";
+const PHONE_DISPLAY = "(35) 99745-8013";
+const EMAIL_CONTACT = "contato@giliardadv.com.br";
+const INSTAGRAM_URL = "https://www.instagram.com/giliardadv/";
+const INSTAGRAM_HANDLE = "@giliardadv";
+const INSTAGRAM_STATS = "1.169 seguidores · 35 posts";
 
-const ADDRESS_PITANGUI =
-  "Praça Dr. Isauro Epifânio, 141 - Bairro São Francisco, Pitangui - MG, 35650-000";
+const ADDRESS_CAMPO_BELO =
+  "R. João Pinheiro, 356 - Centro, Campo Belo - MG, 37270-000";
 
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Alexandre+Abreu+L%C3%BAcio+%E2%80%94+Advocacia%0APitangui+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Ronaldo+Giliard+Advocacia+e+Consultoria+Jur%C3%ADdica%0ACampo+Belo+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/search?sca_esv=34388a73116c39a8&sxsrf=AKL5yDjKhYjAaGUP_nWraMg-9e1TPu6VoQ:1793289988992&q=escrit%C3%B3rio+de+advocacia+-+dr.+alexandre+abreu+l%C3%BAcio+pitangui+endere%C3%A7o&ludocid=2858374849778695354&sa=X&ved=2ahUKEwiTjZfmzd-XAxWdqZUCHV4xPYsQ6BN6BAg2EAI";
+  "https://www.google.com/search?sca_esv=a225a88ab5a0d3cb&sxsrf=AKL5yDi3-vkda8Xhmq2e6vyazpAvb_X0mA:1793301708947&q=ronaldo+giliard+advocacia+e+consultoria+jur%C3%ADdica+campo+belo+endere%C3%A7o&ludocid=7500559776695212659&sa=X&ved=2ahUKEwjOvti6-d-XAxU0G7kGHZyUMr0Q6BN6BAg6EAI";
 
-// Official assets generated from the new client logo & photoshoot
-const LOGO_SRC = "/logo-trimmed.png";
-const LOGO_WHITE_SRC = "/logo-white.png";
-const EMBLEM_SRC = "/emblema-al.png";
-const FOTO_HERO_SRC = "/dr-alexandre-lucena.jpg";
-const FOTO_PORTRAIT_SRC = "/dr-alexandre-portrait.jpg";
+// Official assets generated from the new client logo & photoshoot (with cache busting v=rg3)
+const LOGO_SRC = "/logo-ronaldo-giliard-trimmed.png?v=rg3";
+const LOGO_WHITE_SRC = "/logo-ronaldo-giliard-white.png?v=rg3";
+const EMBLEM_SRC = "/emblema-rg.png?v=rg3";
+const FOTO_HERO_SRC = "/ronaldo-giliard.jpg?v=rg3";
+const FOTO_PORTRAIT_SRC = "/dr-ronaldo-portrait.jpg?v=rg3";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dr. Alexandre Abreu Lúcio / Agenor Lucena Advocacia! Gostaria de agendar uma consulta jurídica especializada sobre o meu caso.";
+    "Olá, Dr. Ronaldo Giliard! Gostaria de agendar uma consulta jurídica especializada sobre o meu caso.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -121,10 +124,10 @@ function GoogleIcon({
 }) {
   return (
     <svg
+      aria-hidden="true"
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      aria-hidden="true"
       className={className}
     >
       <path
@@ -175,131 +178,131 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-do-trabalho-estrategico",
-    title: "Direito Trabalhista Estratégico (Trabalhador & Empresa)",
-    category: "Rescisão Indireta · Horas Extras · Verbas Rescisórias · Insalubridade · Danos Morais",
-    icon: Briefcase,
-    tag: "Defesa Combativa · Cálculos Trabalhistas Precisos · Acordos & Ações Judiciais",
+    id: "direito-criminal-defesa-penal",
+    title: "Direito Criminal & Defesa Penal Estratégica 24h",
+    category: "Plantão em Delegacia · Audiência de Custódia · Flagrante · Tribunal do Júri · Habeas Corpus",
+    icon: Siren,
+    tag: "Plantão Urgente 24h · Defesa Combativa · Liberdade Provisória",
     summary:
-      "Atuação intransigente na garantia integral dos direitos do trabalhador e na assessoria preventiva empresarial. Reversão de demissões injustas, cobrança de horas extras e recebimento de verbas retidas.",
+      "Atendimento imediato em situações de urgência penal. Acompanhamento rigoroso em delegacias, pedidos de liberdade provisória, relaxamento de prisão em flagrante e defesa perante o Tribunal do Júri.",
     details:
-      "As relações de trabalho exigem técnica jurídica apurada, agilidade e comprovação documental rigorosa. Sob o comando do Dr. Alexandre Abreu Lúcio, defendemos com firmeza o trabalhador que teve seus direitos violados — seja por demissão sem quitação de verbas, acúmulo de função, horas extras não remuneradas, adicionais de insalubridade ou periculosidade e assédio moral no ambiente corporativo. Também prestamos consultoria consultiva e contenciosa a micro e pequenas empresas, prevenindo passivos trabalhistas com segurança.",
+      "A liberdade e a dignidade humana não podem esperar. Sob a liderança do Dr. Ronaldo Giliard (OAB/MG 218.682), prestamos assistência criminal intransigente desde os primeiros momentos da abordagem policial ou lavratura do flagrante, passando pela realização de audiências de custódia, impetração de Habeas Corpus perante o Tribunal de Justiça de Minas Gerais (TJMG), Superior Tribunal de Justiça (STJ) e Supremo Tribunal Federal (STF). Atuamos com técnica apurada, agilidade e total sigilo para assegurar o respeito irrestrito às garantias constitucionais.",
     topics: [
-      "Rescisão Indireta do Contrato de Trabalho: saída da empresa recebendo todas as indenizações como se fosse demitido sem justa causa",
-      "Cobrança de Horas Extras não pagas, intervalos intrajornada suprimidos e banco de horas irregular",
-      "Verbas Rescisórias em atraso: aviso prévio, férias vencidas/proporcionais, 13º salário e multa de 40% do FGTS",
-      "Adicionais de Insalubridade e Periculosidade com perícia técnica oficial nos locais de trabalho",
-      "Estabilidade da Gestante, cipeiros e acidentados: garantia de reintegração ou indenização substitutiva imediata",
-      "Indenização por Acidente de Trabalho, Doenças Ocupacionais, Burnout e LER/DORT",
-      "Ação por Danos Morais em virtude de Assédio Moral, humilhação, perseguição ou condições degradantes",
-      "Defesa de Empresas e Mediação de Acordos vantajosos perante as Varas do Trabalho",
+      "Plantão Criminal 24 Horas: acompanhamento presencial em delegacias de polícia e unidades prisionais",
+      "Audiência de Custódia: pedidos urgentes de liberdade provisória, arbitramento de fiança ou relaxamento de prisão ilegal",
+      "Tribunal do Júri: defesa combativa e oratória estratégica em crimes dolosos contra a vida",
+      "Impetração de Habeas Corpus com pedido liminar em casos de constrangimento ilegal e excesso de prazo",
+      "Defesa em Inquéritos Policiais e Ações Penais por crimes contra o patrimônio, honra, trânsito e drogas",
+      "Execução Penal: pedidos de progressão de regime (fechado, semiaberto, aberto), livramento condicional e remição de pena",
+      "Crimes Econômicos, Empresariais e Defesa de Direitos Fundamentais em todas as instâncias judiciais",
     ],
     whatsAppText:
-      "Olá, Dr. Alexandre Abreu Lúcio! Gostaria de consultar sobre meus Direitos Trabalhistas (rescisão, horas extras ou rescisão indireta).",
+      "Olá, Dr. Ronaldo Giliard! Preciso de atendimento urgente na área Criminal (Delegacia, Custódia ou Processo Penal).",
   },
   {
     id: "direito-civel-indenizacoes",
-    title: "Direito Cível & Responsabilidade Civil (Ações Indenizatórias)",
-    category: "Danos Morais & Materiais · Negativação Indevida no SPC/Serasa · Fraudes Bancárias · Acidentes",
+    title: "Direito Cível, Contratos & Ações Indenizatórias",
+    category: "Danos Morais e Materiais · Liminar SPC/Serasa · Fraudes Bancárias · Acidentes · Cobranças",
     icon: Scale,
-    tag: "Reparação Integral · Liminar para Limpeza de Nome · Indenização Justa",
+    tag: "Reparação Integral · Celeridade Processual · Nome Limpo",
     summary:
-      "Defesa contra prejuízos patrimoniais e ofensas à sua honra. Pedido liminar urgente para retirada imediata do seu nome de órgãos de proteção ao crédito e indenização por atos ilícitos.",
+      "Proteção firme do seu patrimônio e da sua honra. Ações de reparação por danos morais, exclusão liminar de restrições indevidas em cadastros de crédito e cobrança ágil de créditos inadimplidos.",
     details:
-      "Quando uma pessoa ou empresa causa um prejuízo injusto a você, o ordenamento jurídico impõe o dever de reparação integral. Atuamos com celeridade máxima para suspender restrições indevidas em cadastros como SPC, Serasa e cartórios de protesto, além de combater fraudes de instituições financeiras (golpes do Pix, empréstimos não autorizados) e pleitear ressarcimento por danos emergentes e lucros cessantes decorrentes de acidentes e inadimplementos.",
+      "O Direito Cível é a espinha dorsal da convivência social e dos negócios. O Dr. Ronaldo Giliard atua com dinamismo para obter decisões liminares emergenciais que retirem inscrições indevidas no SPC/Serasa, revertam fraudes virtuais (como o golpe do Pix e empréstimos consignados fraudulentos) e garantam a integral reparação por prejuízos materiais, lucros cessantes e abalos morais decorrentes de acidentes, descumprimentos contratuais ou ofensas públicas.",
     topics: [
-      "Retirada Liminar de Inscrição Indevida no SPC e Serasa com pedido de indenização por dano moral in re ipsa",
-      "Fraudes Bancárias e Golpes Virtuais: recuperação de valores em transferências indevidas e cancelamento de consignados",
-      "Indenização por Acidentes de Trânsito: conserto de veículo, despesas médicas, lucros cessantes e dano estético",
-      "Execução de Dívidas e Cobrança Judicial/Extrajudicial de cheques, notas promissórias e contratos inadimplidos",
-      "Ações de Despejo e Cobrança de Aluguéis residenciais e comerciais em atraso",
-      "Reparação por Danos à Honra, Calúnia, Difamação e Violação da Imagem pessoal ou profissional",
+      "Ação com Pedido Liminar para Exclusão de Negativação Indevida no SPC, Serasa e Cartórios de Protesto",
+      "Indenização por Danos Morais, Materiais e Estéticos com apuração técnica das perdas sofridas",
+      "Fraudes Bancárias e Golpes Eletrônicos: anulação de contratos não solicitados e recuperação de valores",
+      "Indenização por Acidentes de Trânsito: reparação de avarias no veículo, tratamento médico e lucros cessantes",
+      "Ações de Cobrança e Execução Judicial de Títulos (cheques, notas promissórias, confissões de dívida e contratos)",
+      "Ações de Despejo, Cobrança de Aluguéis e Conflitos Locatícios residenciais ou comerciais",
+      "Direito Imobiliário: ações possessórias, usucapião, regularização de escrituras e rescisões de promessa de compra e venda",
     ],
     whatsAppText:
-      "Olá, Dr. Alexandre! Gostaria de consultar sobre Ação Indenizatória / Negativação Indevida / Danos Morais.",
-  },
-  {
-    id: "contratos-negociacoes-estrategicas",
-    title: "Contratos & Negociações Estratégicas",
-    category: "Elaboração e Revisão Contratual · Compra e Venda de Imóveis · Locação · Notificações Extrajudiciais",
-    icon: FileText,
-    tag: "Blindagem Jurídica · Direito Explicado · Segurança nos Negócios",
-    summary:
-      "Assessoria contratual minuciosa para garantir validade jurídica inquestionável. Cláusulas claras, prevenção de litígios e equilíbrio patrimonial em negócios comerciais e imobiliários.",
-    details:
-      "A melhor maneira de vencer um processo é estruturar um contrato tão blindado e claro que impeça qualquer controvérsia judicial futura. Aplicamos o compromisso do 'Direito Explicado' para que você entenda minuciosamente cada obrigação e penalidade contratual antes de assinar. Elaboramos instrumentos de compra e venda de imóveis rurais e urbanos, contratos de locação comercial, termos de cessão e notificações com força probatória.",
-    topics: [
-      "Elaboração e Análise Técnica de Contratos de Compra e Venda e Promessa de Compra e Venda de Imóveis",
-      "Contratos de Locação Residencial e Comercial com cláusulas de garantia sólidas (fiança, caução, seguro)",
-      "Contratos de Prestação de Serviços, Parcerias Comerciais e Acordos entre Sócios",
-      "Notificações Extrajudiciais para constituição formal em mora, rescisão contratual e cobrança de multas",
-      "Análise de Riscos Imobiliários (Due Diligence): levantamento de certidões judiciais, fiscais e cartorárias",
-      "Renegociação de Dívidas e Acordos Extrajudiciais com efeito de título executivo",
-    ],
-    whatsAppText:
-      "Olá, Dr. Alexandre Abreu Lúcio! Gostaria de suporte para Elaboração ou Revisão de Contrato.",
-  },
-  {
-    id: "direito-do-consumidor",
-    title: "Direito do Consumidor & Defesa de Direitos",
-    category: "Planos de Saúde · Atraso e Cancelamento de Voos · Cobranças Abusivas · Concessionárias · Vício de Produto",
-    icon: Shield,
-    tag: "Equilíbrio na Relação · Medidas de Urgência · Devolução em Dobro",
-    summary:
-      "Combate intransigente a práticas abusivas praticadas por bancos, companhias aéreas, planos de saúde e fornecedores. Aplicação rigorosa do Código de Defesa do Consumidor.",
-    details:
-      "O consumidor não pode ser prejudicado pelo poder econômico de grandes corporações. Se você teve uma cirurgia negada pelo plano de saúde, seu voo cancelado gerando perda de compromissos ou férias, sua bagagem extraviada, ou recebeu cobranças indevidas de operadoras de telefonia e energia, ingressamos imediatamente com pedidos liminares para resguardar sua saúde, sua dignidade e seu dinheiro.",
-    topics: [
-      "Ações Urgentes contra Planos de Saúde: liberação de cirurgias, próteses, exames e fornecimento de remédios de alto custo",
-      "Direito Aéreo: indenização por cancelamento e atraso excessivo de voos, perda de conexões e extravio de bagagens",
-      "Cobranças Indevidas de tarifas bancárias, planos de telefonia, contas de energia ou água com devolução em dobro",
-      "Vício do Produto e Veículos com Defeito não solucionados pelos fabricantes ou concessionárias no prazo legal",
-      "Cancelamento de compras com estorno de valores e combate a cláusulas contratuais abusivas",
-    ],
-    whatsAppText:
-      "Olá, Dr. Alexandre! Preciso de auxílio jurídico em uma causa de Direito do Consumidor.",
+      "Olá, Dr. Ronaldo Giliard! Gostaria de consultar sobre Ação Cível / Indenização por Danos Morais / Nome Negativado.",
   },
   {
     id: "direito-de-familia-sucessoes",
     title: "Direito de Família & Sucessões (Cível)",
-    category: "Divórcio Consensual em Cartório · Guarda & Visitas · Pensão Alimentícia Urgente · Inventário Extrajudicial",
+    category: "Divórcio Consensual em Cartório · Guarda & Convivência · Pensão Alimentícia · Inventário Extrajudicial",
     icon: Users,
-    tag: "Atendimento Humanizado · Resguardo dos Filhos · Celeridade em Cartório",
+    tag: "Atendimento Humanizado · Agilidade em Cartório · Resguardo Familiar",
     summary:
-      "Condução pacificadora e ágil de questões familiares e partilha de bens. Divórcio e inventário em cartório de notas, minimizando desgastes emocionais e custos desnecessários.",
+      "Soluções pacificadoras e ágeis para proteger quem você ama e organizar o patrimônio da família. Divórcios e inventários realizados em cartório com economia de tempo e custos.",
     details:
-      "Assuntos de família exigem um acolhimento empático somado à técnica jurídica firme. Priorizamos sempre a via consensual para solucionar divórcios e inventários diretamente em cartório em questão de semanas, reduzindo custos de impostos (ITCD) e poupando os envolvidos de audiências dolorosas. Na via litigiosa, defendemos intransigentemente o resguardo dos filhos e a divisão justa do patrimônio.",
+      "As questões de família e sucessões exigem equilíbrio emocional, empatia e extrema firmeza técnica. Priorizamos a via consensual para realizar divórcios e partilhas de herança diretamente em Cartório de Notas de maneira rápida e segura. Quando o litígio for indispensável, garantimos defesa intransigente do melhor interesse dos filhos menores, fixação correta de pensão alimentícia e justa partilha dos bens conquistados.",
     topics: [
-      "Divórcio Consensual em Cartório de Notas: procedimento descomplicado, seguro e concluído em poucos dias",
-      "Divórcio Litigioso Estratégico com blindagem e divisão proporcional dos bens do casal",
-      "Fixação de Pensão Alimentícia Provisória urgente e cobrança de débitos em atraso (sob pena de prisão)",
-      "Regulamentação e Alteração de Guarda Compartilhada e Regime de Convivência dos Filhos",
-      "Ação Revisional e Exoneração de Alimentos fundamentada na mudança da capacidade financeira",
-      "Inventário Extrajudicial em Cartório de Notas com partilha pacífica de herança e economia de taxas",
-      "Planejamento Sucessório Familiar: doações com reserva de usufruto e testamentos públicos",
+      "Divórcio Consensual em Cartório de Notas: procedimento descomplicado, seguro e concluído em curto prazo",
+      "Divórcio Litigioso: partilha justa de bens, busca de patrimônio oculto e blindagem dos direitos do cônjuge",
+      "Pensão Alimentícia: pedido liminar de alimentos provisórios e execução de pensão em atraso (sob pena de prisão)",
+      "Ação Revisional e Exoneração de Alimentos com base na alteração da capacidade contributiva",
+      "Guarda Compartilhada e Regulamentação do Regime de Convivência e Visitas dos Filhos",
+      "Inventário Extrajudicial em Cartório: partilha rápida de herança, redução de custos e desembaraço de bens",
+      "Planejamento Sucessório Familiar: doações com cláusula de usufruto e testamentos públicos",
     ],
     whatsAppText:
-      "Olá, Dr. Alexandre Abreu Lúcio! Gostaria de orientações sobre Divórcio, Pensão ou Inventário em Cartório.",
+      "Olá, Dr. Ronaldo Giliard! Gostaria de orientações sobre Divórcio, Guarda, Pensão ou Inventário em Cartório.",
   },
   {
-    id: "direito-explicado-consultoria",
-    title: "Consultoria Preventiva & O Conceito de 'Direito Explicado'",
-    category: "Direito Sem Juridiquês · Pareceres Acessíveis · Prevenção de Conflitos · Mediação Extrajudicial",
-    icon: BookOpen,
-    tag: "Linguagem Clara · Decisões Conscientes · Transparência Inegociável",
+    id: "consultoria-juridica-speed-process",
+    title: "Consultoria Jurídica & 'Speed in the Process'",
+    category: "Agilidade Comprovada · Diagnóstico Preventivo · Blindagem de Riscos · Resolução Ágil",
+    icon: Zap,
+    tag: "Speed in the Process · Alta Celeridade · Preço Justo",
     summary:
-      "O diferencial de entender exatamente cada detalhe do seu caso. Tradução da linguagem jurídica técnica para que você saiba com segurança seus riscos, prazos e chances reais de sucesso.",
+      "O diferencial que consagrou o Dr. Ronaldo Giliard perante 35 avaliações 5 estrelas no Google: rapidez nas diligências, atendimento resolutivo e sem protelações desnecessárias.",
     details:
-      "Uma das marcas mais reconhecidas do Dr. Alexandre Abreu Lúcio (Agenor Lucena) nas redes sociais e na advocacia prática é o projeto 'Direito Explicado'. Acreditamos que a justiça só é plena quando o cliente compreende o que está acontecendo sem barreiras de juridiquês. Realizamos consultas preventivas esclarecedoras para solucionar disputas de forma amigável antes de se tornarem litígios judiciais demorados.",
+      "Um dos elogios mais frequentes dos clientes atendidos em Campo Belo e região é a celeridade do trabalho: 'speed in the process'. O escritório combina tecnologia jurídica com presença constante nos fóruns e delegacias, assegurando que o processo não fique esquecido em gabinetes. Prestamos consultoria jurídica preventiva e contenciosa para antecipar soluções, evitar litígios custosos e conduzir negociações extrajudiciais com agilidade ímpar.",
     topics: [
-      "Consultoria Jurídica Estratégica com análise de viabilidade processual e explicações em linguagem simples",
-      "Mediação Extrajudicial de conflitos entre familiares, sócios, vizinhos e parceiros comerciais",
-      "Elaboração de Acordos Extrajudiciais com força de título executivo homologável em juízo",
-      "Orientação preventiva para empreendedores sobre conformidade trabalhista e contratual",
-      "Acompanhamento em reuniões de conciliação e negociações de alto impacto",
+      "Consultoria Jurídica Ágil com análise imediata de viabilidade processual e opções resolutivas",
+      "Acompanhamento Diário de Prazos e Diligências Diretas junto a Varas Judiciais e Delegacias",
+      "Elaboração e Revisão de Contratos de Compra e Venda, Locação e Prestação de Serviços",
+      "Mediação e Negociação Extrajudicial de acordos com força de título executivo judicial",
+      "Assessoria Preventiva para Pessoas Físicas e Empresas na minimização de passivos e litígios",
+      "Atendimento transparente com prestação de contas detalhada a cada andamento processual",
     ],
     whatsAppText:
-      "Olá, Dr. Alexandre! Gostaria de agendar uma consulta preventiva baseada no 'Direito Explicado'.",
+      "Olá, Dr. Ronaldo Giliard! Gostaria de uma Consultoria Jurídica ágil para resolver minha situação com rapidez.",
+  },
+  {
+    id: "direito-do-consumidor-bancario",
+    title: "Direito do Consumidor & Defesa Contra Abusos",
+    category: "Bancos e Tarifas · Planos de Saúde · Atraso de Voos · Cobranças Indevidas · Produtos com Defeito",
+    icon: Shield,
+    tag: "Defesa do Consumidor · Medidas Urgentes · Devolução em Dobro",
+    summary:
+      "Defesa firme contra o poderio de bancos, grandes empresas de telefonia, companhias aéreas e fornecedores. Aplicação rigorosa do Código de Defesa do Consumidor.",
+    details:
+      "O consumidor não pode ser lesado por cobranças injustas ou práticas predatórias do mercado. O Dr. Ronaldo Giliard ingressa com ações judiciais objetivas para reparar danos causados por produtos com defeito não sanados, cobranças abusivas de tarifas bancárias com pedido de repetição de indébito em dobro, cancelamentos injustificados de voos com extravio de bagagem e negativas ilegais de exames e cirurgias por planos de saúde.",
+    topics: [
+      "Cobranças Abusivas e Tarifas Bancárias Não Contratadas com pedido de devolução em dobro",
+      "Ações contra Planos de Saúde: pedidos liminares para liberação imediata de cirurgias, tratamentos e remédios",
+      "Direito Aéreo: indenização por cancelamento injustificado de voo, atrasos excessivos e extravio de bagagem",
+      "Veículos com Defeito e Produtos com Vício oculto não solucionados no prazo legal de 30 dias",
+      "Cancelamento de Compras Fraudulentas e combate a cláusulas contratuais abusivas",
+    ],
+    whatsAppText:
+      "Olá, Dr. Ronaldo! Preciso de assessoria jurídica em uma causa de Direito do Consumidor / Abuso Bancário.",
+  },
+  {
+    id: "direito-imobiliario-regularizacao",
+    title: "Direito Imobiliário & Regularização de Imóveis",
+    category: "Contratos de Compra e Venda · Usucapião Judicial e em Cartório · Despejo · Reintegração de Posse",
+    icon: Building2,
+    tag: "Segurança Imobiliária · Usucapião Extrajudicial · Proteção de Bens",
+    summary:
+      "Segurança jurídica na compra, venda, locação e regularização de imóveis urbanos e rurais em Campo Belo e toda a região mineira.",
+    details:
+      "A aquisição ou posse de um imóvel representa o patrimônio de uma vida inteira. Prestamos assessoria completa em transações imobiliárias para evitar surpresas com penhoras, dívidas fiscais ou irregularidades de matrícula. Conduzimos ações de usucapião judicial e extrajudicial (em cartório), defesas de posse e despejos por inadimplência com total rigor probatório.",
+    topics: [
+      "Elaboração e Due Diligence completa em Contratos de Compra e Venda de Imóveis urbanos e fazendas",
+      "Ações de Usucapião Extrajudicial (em Cartório de Registro de Imóveis) e Usucapião Judicial",
+      "Ações Possessórias: Reintegração de Posse, Manutenção de Posse e Interdito Proibitório",
+      "Ações de Despejo e Cobrança de Aluguéis e encargos condominiais em atraso",
+      "Retificação de Área, desmembramento e unificação de matrículas imobiliárias",
+    ],
+    whatsAppText:
+      "Olá, Dr. Ronaldo Giliard! Gostaria de consultar sobre Regularização de Imóvel, Usucapião ou Contrato Imobiliário.",
   },
 ];
 
@@ -308,11 +311,11 @@ interface Review {
   badge: string;
   date: string;
   category:
-    | "Ética & Respeito (ethics)"
-    | "Competência (lawyer)"
-    | "Inteligente & Perspicaz (inteligente)"
-    | "Atencioso & Dedicado"
-    | "Cível & Trabalhista";
+    | "Rapidez & Eficácia (speed in the process)"
+    | "Competência & Técnica"
+    | "Atendimento & Clareza"
+    | "Ética & Preço Justo"
+    | "Melhor da Região";
   highlight: string;
   content: string;
   ownerReply?: string;
@@ -321,172 +324,174 @@ interface Review {
 
 const clientReviews: Review[] = [
   {
-    name: "Fabíola Juliani",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Competência (lawyer)",
-    highlight: "Excelente profissional muito atencioso, sempre fui bem atendida e minha família também. Ótimo advogado! Parabéns Alexandre pelo seu excelente trabalho!",
-    content: "Excelente profissional muito atencioso sempre fui bem atendida e minha família tbm ótimo advogado Parabéns Alexandre pelo seu excelente trabalho",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
-    ownerDate: "1 mês atrás",
-  },
-  {
-    name: "Nayara",
-    badge: "3 avaliações · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Competência (lawyer)",
-    highlight: "Excelente profissional! Competente, atencioso e muito seguro no que faz. Super recomendo!",
-    content: "Excelente profissional! Competente, atencioso e muito seguro no que faz. Super recomendo!",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
-    ownerDate: "1 mês atrás",
-  },
-  {
-    name: "Rebeka Luiza",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Inteligente & Perspicaz (inteligente)",
-    highlight: "Excelente profissional, atendimento humanizado, inteligente, perspicaz, comunica com a linguagem do cliente!",
-    content: "Excelente profissional, atendimento humanizado, inteligente, perpiscaz, comunica com a linguagem do cliente",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
-    ownerDate: "1 mês atrás",
-  },
-  {
-    name: "Angela Queiroz",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Atencioso & Dedicado",
-    highlight: "Advogado com experiência e atenção que fazem a diferença. Atendimento com dedicação, agilidade e cordialidade. Recomendo!",
-    content: "Advogado com experiência e atenção que fazem a diferença. Atendimento realizado com dedicação, agilidade e cordialidade. Recomendo.",
-    ownerReply: "Obrigado pelo carinho e atenção.",
-    ownerDate: "5 meses atrás",
-  },
-  {
-    name: "Wesley Fernando",
-    badge: "2 avaliações · 1 foto · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Inteligente & Perspicaz (inteligente)",
-    highlight: "Cara inteligente demais, experiente no que faz!",
-    content: "Cara inteligente dms , experiente no que faz .",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
-    ownerDate: "1 mês atrás",
-  },
-  {
-    name: "criduarte criduarte",
-    badge: "3 avaliações · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Ética & Respeito (ethics)",
-    highlight: "Muito atencioso, ágil e de muita seriedade!",
-    content: "Muito atencioso, ágil e de muita seriedade.",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
-    ownerDate: "1 mês atrás",
-  },
-  {
-    name: "Renata Queiroz",
-    badge: "4 avaliações · 5 Estrelas",
-    date: "5 meses atrás",
-    category: "Ética & Respeito (ethics)",
-    highlight: "Grande advogado. Super atencioso, ético e competente!",
-    content: "Grande advogado. Super atencioso,ético e competente.",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho. Fico feliz em saber que consegui atender às suas expectativas e oferecer o suporte jurídico necessário. Meu compromisso é sempre atuar com dedicação, ética e responsabilidade para alcançar os melhores resultados. Conte comigo sempre que precisar!",
-    ownerDate: "5 meses atrás",
-  },
-  {
-    name: "Joice Lopes",
-    badge: "3 avaliações · 5 Estrelas",
-    date: "3 anos atrás",
-    category: "Competência (lawyer)",
-    highlight: "Profissional de excelência. Ótimo atendimento, muito claro nas suas explicações e eficiência nos resultados. Recomendo!",
-    content: "Profissional de excelência. Ótimo atendimento, muito claro nas suas explicações e eficiência nos resultados. Recomendo!",
-    ownerReply: "Obrigado pelo carinho.",
-    ownerDate: "2 anos atrás",
-  },
-  {
-    name: "Marcos Dias",
-    badge: "8 avaliações · 5 Estrelas",
+    name: "Luisa Montserrat",
+    badge: "12 avaliações · 6 fotos · 5 Estrelas",
     date: "4 anos atrás",
-    category: "Competência (lawyer)",
-    highlight: "Excelente profissional, super recomendo seu serviço. Esse ama o que faz, parabéns!",
-    content: "Excelente profissional, super recomendo seu serviço. Esse ama o que faz, parabéns!!!",
-    ownerReply: "Obrigado pelo carinho!",
-    ownerDate: "2 anos atrás",
+    category: "Ética & Preço Justo",
+    highlight: "Profissional sério e competente, resolveu meus problemas com rapidez e cobrou um preço justo. Indico muito seus serviços.",
+    content: "Profissional sério e competente, resolveu meus problemas com rapidez e cobrou um preço justo. Indico muito seus serviços.",
+    ownerReply: "Muito obrigado Luisa, sempre a disposição.",
+    ownerDate: "4 anos atrás",
   },
   {
-    name: "Marcia Mourão",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Atencioso & Dedicado",
-    highlight: "Um profissional que recomendo sempre 👏",
-    content: "Um profissional que recomendo sempre👏",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
-    ownerDate: "1 mês atrás",
-  },
-  {
-    name: "Marley Stéfanie",
-    badge: "2 avaliações · 1 foto · 5 Estrelas",
-    date: "5 meses atrás",
-    category: "Atencioso & Dedicado",
-    highlight: "Ótimo advogado! Super recomendo!",
-    content: "Ótimo advogado! Super recomendo!",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
-    ownerDate: "5 meses atrás",
-  },
-  {
-    name: "Elaine Almas",
-    badge: "7 avaliações · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Atencioso & Dedicado",
-    highlight: "Muito bom advogado. Bem atencioso!",
-    content: "Muito bom advogado. Bem atencioso",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
-    ownerDate: "1 mês atrás",
-  },
-  {
-    name: "Magna Regina",
-    badge: "1 avaliação · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Competência (lawyer)",
-    highlight: "Excelente profissional! Super indico!",
-    content: "Excelente profissional Super indico",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
-    ownerDate: "1 mês atrás",
-  },
-  {
-    name: "Adma Queiroz Xavier",
-    badge: "2 avaliações · 1 foto · 5 Estrelas",
-    date: "3 anos atrás",
-    category: "Ética & Respeito (ethics)",
-    highlight: "Excelente profissional, dedicado e ético. Super recomendo!",
-    content: "Excelente profissional, dedicado e ético. Super recomendo.",
-    ownerReply: "Obrigado pelo retorno positivo.",
-    ownerDate: "2 anos atrás",
-  },
-  {
-    name: "Raquel Lobato",
+    name: "Paulo Ferreira",
     badge: "3 avaliações · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Cível & Trabalhista",
-    highlight: "Ótima experiência! Atendimento nota 10!",
-    content: "Ótima!",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
-    ownerDate: "1 mês atrás",
+    date: "4 anos atrás",
+    category: "Rapidez & Eficácia (speed in the process)",
+    highlight: "Excelente Advogado, rápido em resolver qualquer situação. O Melhor da cidade com certeza!!!",
+    content: "Excelente Advogado, rápido em resolver qualquer situação. O Melhor da cidade com certeza!!!",
+    ownerReply: "Grato pela avaliação. Obrigado pela confiança.",
+    ownerDate: "4 anos atrás",
   },
   {
-    name: "Ana Carolina Xavier",
+    name: "Nayara Gomes",
     badge: "1 avaliação · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Atencioso & Dedicado",
-    highlight: "Ótimo atendimento, dedicação e seriedade com o cliente.",
-    content: "Ótimo atendimento.",
-    ownerReply: "Olá! Muito obrigado pela sua avaliação e pela confiança depositada em meu trabalho.",
-    ownerDate: "1 mês atrás",
+    date: "4 anos atrás",
+    category: "Atendimento & Clareza",
+    highlight: "Ótimo atendimento, nos deu toda atenção que precisávamos, sempre esclarecendo as dúvidas e resolvendo da melhor forma possível.",
+    content: "Ótimo atendimento, nos deu toda atenção que precisávamos, sempre esclarecendo as dúvidas e resolvendo da melhor forma possível.",
   },
   {
-    name: "Neliton Junior",
+    name: "Arthur Cruz",
+    badge: "4 avaliações · 5 Estrelas",
+    date: "2 anos atrás",
+    category: "Rapidez & Eficácia (speed in the process)",
+    highlight: "Excelente Profissional, agilizou meu processo.",
+    content: "Excelente Profissional, agilizou meu processo.",
+  },
+  {
+    name: "Lucas Marques",
+    badge: "Local Guide · 5 avaliações · 2 fotos · 5 Estrelas",
+    date: "3 anos atrás",
+    category: "Competência & Técnica",
+    highlight: "Excelente profissional, sempre disposto a fazer o melhor pelos seus clientes!",
+    content: "Excelente profissional, sempre disposto a fazer o melhor pelos seus clientes!",
+  },
+  {
+    name: "Raul Vitor",
     badge: "1 avaliação · 5 Estrelas",
-    date: "1 mês atrás",
-    category: "Cível & Trabalhista",
-    highlight: "Excelente! Atuação impecável e de confiança.",
-    content: "Excelente",
+    date: "3 anos atrás",
+    category: "Melhor da Região",
+    highlight: "Ótimo advogado! Atendimento perfeito, melhor da região, indico a todos.",
+    content: "Ótimo advogado! Atendimento perfeito , melhor da região,indico a todos .",
+    ownerReply: "Obrigado!",
+    ownerDate: "3 anos atrás",
+  },
+  {
+    name: "Áttila Laudares",
+    badge: "Local Guide · 19 avaliações · 3 fotos · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Competência & Técnica",
+    highlight: "Profissional gabaritado com atendimento diferenciado! Recomendo!",
+    content: "Profissional gabaritado com atendimento diferenciado!Recomendo!",
+    ownerReply: "Grato pela avaliação. Obrigado pela confiança.",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "Bruno Araujo",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Ética & Preço Justo",
+    highlight: "Ótimo profissional, íntegro.",
+    content: "Ótimo profissional, íntegro.",
+    ownerReply: "Grato pela avaliação. Obrigado pela confiança.",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "Gabriel Cantanhede",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "3 anos atrás",
+    category: "Melhor da Região",
+    highlight: "Um dos melhores advogados de Campo Belo e região.",
+    content: "Um dos melhores advogados de campo belo e região.",
+  },
+  {
+    name: "Dra. Hellen Lima",
+    badge: "3 avaliações · 5 Estrelas",
+    date: "3 anos atrás",
+    category: "Melhor da Região",
+    highlight: "Melhor advogado de Campo Belo e região!",
+    content: "Melhor advogado de Campo Belo e região!",
+  },
+  {
+    name: "Rogerio Teixeira",
+    badge: "2 avaliações · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Competência & Técnica",
+    highlight: "Excelente! Dos melhores que possa ter, está de Parabéns...",
+    content: "Excelente! Dos melhores que possa ter, está de Parabéns...",
+    ownerReply: "Obrigado meu amigo",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "Cassiano Rodrigues Mota",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Atendimento & Clareza",
+    highlight: "Excelente atendimento!",
+    content: "Excelente atendimento!",
+    ownerReply: "Muito obrigado pela avaliação. Sempre a disposição.",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "João Paulo Feliciano",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Melhor da Região",
+    highlight: "Melhor da região!",
+    content: "Melhor de região",
+    ownerReply: "Muito obrigado pela confiança!",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "Denilson Martins",
+    badge: "1 avaliação · 1 foto · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Atendimento & Clareza",
+    highlight: "Excelente atendimento!",
+    content: "Excelente atendimento",
+    ownerReply: "Grato pela avaliação. Obrigado pela confiança.",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "Fabio Júnior",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Atendimento & Clareza",
+    highlight: "Melhor advogado. Sempre prestativo!",
+    content: "Melhor advogado. Sempre prestativo",
+    ownerReply: "Obrigado",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "israel israel",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Melhor da Região",
+    highlight: "Melhor da Região!",
+    content: "Melhor da Região",
+    ownerReply: "Muito obrigado pela avaliação. Sempre a disposição.",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "Lucas Freitas",
+    badge: "2 avaliações · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Competência & Técnica",
+    highlight: "Profissional excelente!!",
+    content: "Profissional excelente!!",
+    ownerReply: "Obrigado amigo!",
+    ownerDate: "4 anos atrás",
+  },
+  {
+    name: "Marcelo Timao",
+    badge: "1 avaliação · 5 Estrelas",
+    date: "4 anos atrás",
+    category: "Competência & Técnica",
+    highlight: "Muito bem assessorado.",
+    content: "Muito bem assessorado.",
+    ownerReply: "Muito obrigado pela confiança!",
+    ownerDate: "4 anos atrás",
   },
 ];
 
@@ -497,34 +502,34 @@ interface FaqItem {
 
 const faqList: FaqItem[] = [
   {
-    question: "Fui demitido ou não recebi meus direitos trabalhistas. Quanto tempo tenho para agir?",
+    question: "Como funciona o atendimento de plantão criminal 24h para prisões em flagrante e delegacia?",
     answer:
-      "A Constituição Federal estabelece o prazo prescricional de até 2 (dois) anos após o término do vínculo de trabalho para ingressar com a Reclamatória Trabalhista, podendo cobrar as verbas dos últimos 5 (cinco) anos trabalhados. Contudo, quanto antes você consultar nosso escritório e recolher os documentos (contracheques, extrato analítico do FGTS, mensagens e testemunhas), mais rápida e robusta será a instrução processual para reaver aviso prévio, horas extras, adicionais e multas.",
+      "Em casos de prisão em flagrante, busca e apreensão, intimação urgente ou realização de audiência de custódia, o Dr. Ronaldo Giliard mantém canal de plantão ininterrupto pelo WhatsApp (35) 99745-8013. O contato imediato com o advogado criminalista é indispensável para garantir que o cidadão não produza provas contra si mesmo, tenha sua integridade física resguardada e possa requerer o relaxamento da prisão ilegal ou a liberdade provisória com a maior brevidade.",
   },
   {
-    question: "O que é Rescisão Indireta e quando o trabalhador pode 'demitir o patrão'?",
+    question: "O que significa o diferencial 'speed in the process' citado nas avaliações do Google?",
     answer:
-      "A rescisão indireta (artigo 483 da CLT) ocorre quando a empresa comete faltas graves contra o empregado — tais como atraso reiterado de salários, não recolhimento de FGTS, exposição a perigos graves sem equipamentos de segurança, exigência de tarefas alheias ao contrato ou assédio moral. Nessa modalidade, o trabalhador pode rescindir o contrato recebendo todas as indenizações como se tivesse sido demitido sem justa causa (aviso prévio, saque do FGTS com 40% e seguro-desemprego).",
+      "A expressão 'speed in the process' (agilidade no processo) é um dos tópicos mais elogiados pelos clientes atendidos no escritório. Ela reflete a nossa postura combativa contra a lentidão burocrática: ajuizamento célere de ações, realização ágil de diligências nos cartórios e fóruns, cumprimento imediato de despachos judiciais e interlocução direta com juízes e promotores para que a sua causa não fique parada.",
   },
   {
-    question: "Tive meu nome negativado indevidamente no SPC/Serasa ou sofri fraude bancária. O que fazer?",
+    question: "Tive meu nome inscrito indevidamente no SPC/Serasa ou sofri golpe bancário. Quanto tempo demora?",
     answer:
-      "A inscrição indevida nos órgãos de proteção ao crédito (quando você nunca contratou o serviço ou quando a dívida já foi paga) gera dano moral presumido ('in re ipsa'). Entramos com Ação Judicial com pedido de liminar para determinar a exclusão do seu CPF dos cadastros restritivos no prazo de poucas horas ou dias, sob pena de multa diária, cumulado com indenização pelos abalos morais e eventuais prejuízos causados.",
+      "A inscrição indevida nos cadastros de inadimplentes sem que você tenha contraído a dívida enseja pedido de Liminar de Urgência ('inaudita altera parte'). O juiz costuma apreciar esse pedido em poucos dias ou horas, determinando a exclusão do seu CPF sob pena de multa diária, cumulado com pedido indenizatório por danos morais presumidos ('in re ipsa').",
   },
   {
-    question: "Como funciona o atendimento com o Dr. Alexandre Abreu Lúcio em Pitangui e para outras cidades?",
+    question: "Como funciona o divórcio e o inventário em cartório? É mais rápido do que na Justiça?",
     answer:
-      "Oferecemos máxima conveniência e sigilo. Para clientes de Pitangui, Conceição do Pará, Leandro Ferreira, Nova Serrana, Pará de Minas e região, realizamos atendimento presencial em nossa sede na Praça Dr. Isauro Epifânio, 141 (bairro São Francisco). Para clientes de outras localidades ou que preferem praticidade, nosso atendimento é 100% digital via WhatsApp oficial, com envio de fotos de documentos e assinatura eletrônica pelo celular, com a mesma segurança jurídica e acompanhamento passo a passo.",
+      "Sim, consideravelmente mais rápido! Se houver consenso entre os herdeiros ou entre o casal e preenchidos os requisitos da lei (inexistência de testamento ou herdeiros incapazes), o ato é formalizado por Escritura Pública em Cartório de Notas na presença do Dr. Ronaldo Giliard. Um procedimento que na Justiça poderia levar anos é resolvido com tranquilidade em poucas semanas, com menores custos de emolumentos e impostos.",
   },
   {
-    question: "Como funciona o divórcio e o inventário em cartório? Realmente é mais rápido do que na Justiça?",
+    question: "O escritório atende apenas em Campo Belo ou também em outras cidades de Minas e do Brasil?",
     answer:
-      "Sim, é incomparavelmente mais rápido! Havendo acordo amigável entre os herdeiros ou entre o casal e preenchidos os requisitos legais, todo o procedimento é lavrado por escritura pública em Cartório de Notas na presença do advogado. Um divórcio ou inventário extrajudicial pode ser concluído em poucas semanas, com menor custo de taxas e sem a necessidade de esperar anos em disputas judiciais desgastantes.",
+      "Nosso escritório físico está situado no coração de Campo Belo - MG (R. João Pinheiro, 356 - Centro), atendendo presencialmente clientes de Campo Belo, Candeias, Cristais, Santana do Jacaré, Aguanil, Perdões, Lavras, Formiga, Arcos e comarcas vizinhas. Além disso, por meio do processo eletrônico (PJe, Projudi e E-Proc), atuamos de forma 100% digital em todo o Estado de Minas Gerais e nos Tribunais Superiores em Brasília.",
   },
   {
-    question: "O que significa na prática o compromisso com o 'Direito Explicado'?",
+    question: "Quais documentos preciso ter em mãos para a primeira consulta jurídica?",
     answer:
-      "O conceito de 'Direito Explicado', amplamente difundido pelo Dr. Alexandre Abreu Lúcio (Agenor Lucena) em suas publicações e atuação profissional, é o compromisso ético de traduzir termos jurídicos complexos para a linguagem do cliente. Você nunca ficará sem entender o que o juiz decidiu, quais são os riscos do processo ou como o acordo será pago. Você participa ativamente das decisões fundamentais do seu caso.",
+      "Para iniciar o atendimento com rapidez, basta ter em mãos seu documento oficial com foto (RG/CNH), comprovante de endereço recente e os documentos específicos da sua demanda (contratos, comprovantes de pagamento, fotos, cópia do boletim de ocorrência no caso criminal, extratos bancários ou certidões). Você pode enviar fotos nítidas ou arquivos PDF diretamente pelo WhatsApp.",
   },
 ];
 
@@ -548,7 +553,7 @@ function Heading({
       )}
       <h2
         className={`font-serif text-3xl font-bold tracking-tight sm:text-4xl lg:text-[2.6rem] ${
-          dark ? "text-white" : "text-[#0a0e17]"
+          dark ? "text-white" : "text-[#0b0f17]"
         }`}
       >
         {children}
@@ -587,11 +592,11 @@ export default function Home() {
 
   const reviewCategories = [
     "Todas",
-    "Ética & Respeito (ethics)",
-    "Competência (lawyer)",
-    "Inteligente & Perspicaz (inteligente)",
-    "Atencioso & Dedicado",
-    "Cível & Trabalhista",
+    "Rapidez & Eficácia (speed in the process)",
+    "Competência & Técnica",
+    "Atendimento & Clareza",
+    "Ética & Preço Justo",
+    "Melhor da Região",
   ];
 
   const filteredReviews =
@@ -605,19 +610,19 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="min-h-screen bg-[#fcfbf9] text-[#0a0e17] selection:bg-[#c59b27] selection:text-[#080c14]">
+      <main className="min-h-screen bg-[#f8fafc] text-[#0b0f17] selection:bg-[#1c2e4d] selection:text-[#ffffff]">
         {/* ======================================================== */}
-        {/* TOP ANNOUNCEMENT BAR (OBSIDIAN GRAPHITE & WARM GOLD)     */}
+        {/* TOP ANNOUNCEMENT BAR (OBSIDIAN NOIR & PLATINUM ACCENT)   */}
         {/* ======================================================== */}
-        <div className="border-b border-[#172136] bg-[#0c121e] py-2 text-xs text-slate-300">
+        <div className="border-b border-[#1e293b] bg-[#0b0f17] py-2 text-xs text-slate-300">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-2 font-medium">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#f5de88] opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-[#c59b27]" />
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-slate-300 opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-white" />
               </span>
               <span className="text-[11px] sm:text-xs text-white font-semibold">
-                AGENOR LUCENA ADVOCACIA · Cível & Trabalhista · OAB/MG 217.363 ⚖️
+                RONALDO GILIARD ADVOCACIA · Cível & Criminal · OAB/MG 218.682 ⚖️
               </span>
             </div>
 
@@ -629,16 +634,16 @@ export default function Home() {
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
               >
                 <Star size={12} className="fill-[#f59e0b] text-[#f59e0b]" />
-                <span className="font-bold text-white">5,0 ★</span> (39 avaliações no Google · Pitangui - MG)
+                <span className="font-bold text-white">5,0 ★</span> (35 avaliações no Google · Campo Belo - MG)
               </a>
               <span className="hidden h-3 w-px bg-slate-700 sm:inline-block" />
               <a
-                href={getWhatsAppUrl("Olá, Dr. Alexandre Lúcio! Gostaria de uma consulta sobre o meu caso.")}
+                href={getWhatsAppUrl("Olá, Dr. Ronaldo Giliard! Gostaria de consultar sobre o meu caso.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden items-center gap-1.5 font-semibold text-slate-200 transition-colors hover:text-white sm:inline-flex"
               >
-                <WhatsAppIcon size={13} className="text-[#25D366]" />
+                <WhatsAppIcon size={13} className="text-white" />
                 {PHONE_DISPLAY}
               </a>
             </div>
@@ -646,7 +651,7 @@ export default function Home() {
         </div>
 
         {/* ======================================================== */}
-        {/* STICKY HEADER / NAVBAR (OFFICIAL AGENOR LUCENA LOGO)     */}
+        {/* STICKY HEADER / NAVBAR (OFFICIAL RONALDO GILIARD LOGO)   */}
         {/* ======================================================== */}
         <header
           className={`sticky top-0 z-40 w-full transition-all duration-300 ${
@@ -656,19 +661,20 @@ export default function Home() {
           }`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-            {/* Left: Official Agenor Lucena Logo */}
+            {/* Left: Official Ronaldo Giliard Logo (with cache-busting) */}
             <a
               href="#"
               className="group flex shrink-0 items-center transition-opacity hover:opacity-90"
-              aria-label="Agenor Lucena Advocacia - Início"
+              aria-label="Ronaldo Giliard Advocacia - Início"
             >
               <Image
                 src={LOGO_SRC}
-                alt="Agenor Lucena Advocacia — OAB/MG 217.363"
+                alt="Ronaldo Giliard Advocacia e Consultoria Jurídica — OAB/MG 218.682"
                 width={480}
                 height={240}
-                className="h-[54px] sm:h-[64px] md:h-[70px] w-auto object-contain"
+                className="h-[56px] sm:h-[66px] md:h-[72px] w-auto object-contain"
                 priority
+                unoptimized
               />
             </a>
 
@@ -678,10 +684,10 @@ export default function Home() {
                 Áreas de Atuação
               </a>
               <a href="#sobre" className="nav-link text-[11px] whitespace-nowrap">
-                Sobre Dr. Alexandre Lúcio
+                Sobre Dr. Ronaldo Giliard
               </a>
               <a href="#diferenciais" className="nav-link text-[11px] whitespace-nowrap">
-                Direito Explicado
+                Speed in the Process
               </a>
               <a href="#depoimentos" className="nav-link text-[11px] whitespace-nowrap">
                 Avaliações Google (5,0 ★)
@@ -694,17 +700,17 @@ export default function Home() {
               </a>
             </nav>
 
-            {/* Right Action: WhatsApp CTA (Imperial Warm Gold) */}
+            {/* Right Action: WhatsApp CTA (Oxford Navy matching Dr. Ronaldo's tie) */}
             <div className="flex shrink-0 items-center gap-3">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de agendar uma consulta sobre o meu caso.")}
+                href={getWhatsAppUrl("Olá, Dr. Ronaldo Giliard! Gostaria de agendar uma consulta sobre o meu caso.")}
                 target="_blank"
-                variant="gold"
+                variant="navy"
                 size="sm"
                 className="hidden sm:inline-flex whitespace-nowrap"
               >
-                <WhatsAppIcon size={14} className="text-[#080c14]" />
-                <span className="hidden 2xl:inline">Converse com Dr. Alexandre</span>
+                <WhatsAppIcon size={14} className="text-white" />
+                <span className="hidden 2xl:inline">Falar com Dr. Ronaldo</span>
                 <span className="2xl:hidden">WhatsApp</span>
               </GlowingButton>
 
@@ -712,7 +718,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="inline-flex size-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-800 transition-colors hover:border-[#c59b27] hover:text-[#9e7420] xl:hidden cursor-pointer"
+                className="inline-flex size-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-800 transition-colors hover:border-[#1c2e4d] hover:text-[#141f33] xl:hidden cursor-pointer"
                 aria-label="Abrir menu principal"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -733,72 +739,73 @@ export default function Home() {
                   <div className="flex items-center pb-3 border-b border-slate-100">
                     <Image
                       src={LOGO_SRC}
-                      alt="Agenor Lucena Advocacia"
+                      alt="Ronaldo Giliard Advocacia"
                       width={360}
                       height={180}
                       className="h-[52px] w-auto object-contain"
                       priority
+                      unoptimized
                     />
                   </div>
                   <a
                     href="#servicos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#141f33]"
                   >
-                    <span>Áreas de Atuação (Cível & Trabalhista)</span>
-                    <ArrowRight size={14} className="text-[#c59b27]" />
+                    <span>Áreas de Atuação (Cível & Criminal)</span>
+                    <ArrowRight size={14} className="text-[#1c2e4d]" />
                   </a>
                   <a
                     href="#sobre"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#141f33]"
                   >
-                    <span>Sobre Dr. Alexandre Abreu Lúcio</span>
-                    <ArrowRight size={14} className="text-[#c59b27]" />
+                    <span>Sobre Dr. Ronaldo Giliard</span>
+                    <ArrowRight size={14} className="text-[#1c2e4d]" />
                   </a>
                   <a
                     href="#diferenciais"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#141f33]"
                   >
-                    <span>Pilares & Direito Explicado</span>
-                    <ArrowRight size={14} className="text-[#c59b27]" />
+                    <span>Speed in the Process (Agilidade)</span>
+                    <ArrowRight size={14} className="text-[#1c2e4d]" />
                   </a>
                   <a
                     href="#depoimentos"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#141f33]"
                   >
-                    <span>Avaliações Google (5,0 ★ · 39 reviews)</span>
-                    <ArrowRight size={14} className="text-[#c59b27]" />
+                    <span>Avaliações no Google (35 Avaliações · 5,0 ★)</span>
+                    <ArrowRight size={14} className="text-[#1c2e4d]" />
                   </a>
                   <a
                     href="#duvidas"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#141f33]"
                   >
                     <span>Dúvidas Frequentes</span>
-                    <ArrowRight size={14} className="text-[#c59b27]" />
+                    <ArrowRight size={14} className="text-[#1c2e4d]" />
                   </a>
                   <a
                     href="#contato"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#9e7420]"
+                    className="flex items-center justify-between py-2 text-sm font-semibold tracking-wider text-slate-700 uppercase transition-colors hover:text-[#141f33]"
                   >
-                    <span>Sede & Contato (Pitangui - MG)</span>
-                    <ArrowRight size={14} className="text-[#c59b27]" />
+                    <span>Sede em Campo Belo - MG</span>
+                    <ArrowRight size={14} className="text-[#1c2e4d]" />
                   </a>
 
-                  <div className="pt-4 border-t border-slate-100">
+                  <div className="pt-2">
                     <GlowingButton
-                      href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de agendar uma consulta jurídica.")}
+                      href={getWhatsAppUrl("Olá, Dr. Ronaldo Giliard! Gostaria de tirar dúvidas sobre meu caso pelo WhatsApp.")}
                       target="_blank"
-                      variant="gold"
+                      variant="navy"
                       size="md"
                       className="w-full"
                     >
                       <WhatsAppIcon size={16} />
-                      <span>Fale com o Dr. Alexandre no WhatsApp</span>
+                      <span>Fale com o Dr. Ronaldo no WhatsApp</span>
                     </GlowingButton>
                   </div>
                 </div>
@@ -808,12 +815,12 @@ export default function Home() {
         </header>
 
         {/* ======================================================== */}
-        {/* DOBRA 1: HERO SECTION — COM FOTO DO DR. ALEXANDRE LÚCIO  */}
+        {/* DOBRA 1: HERO SECTION — COM FOTO DO DR. RONALDO GILIARD  */}
         {/* ======================================================== */}
-        <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-22 lg:pt-18 lg:pb-26 bg-[#fcfbf9]">
-          {/* Subtle Ambient Light Champagne & Golden Glow */}
-          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[950px] -translate-x-1/2 rounded-full bg-radial from-[#f5de88]/20 via-[#f6f3eb]/70 to-transparent blur-3xl" />
-          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-80 w-80 rounded-full bg-[#e6dfd1]/40 blur-3xl" />
+        <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-22 lg:pt-18 lg:pb-26 bg-[#f8fafc]">
+          {/* Subtle Ambient Light Platinum & Tie Blue Glow */}
+          <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[600px] w-[950px] -translate-x-1/2 rounded-full bg-radial from-slate-200/40 via-[#1c2e4d]/5 to-transparent blur-3xl" />
+          <div className="pointer-events-none absolute top-1/3 -right-40 -z-10 h-80 w-80 rounded-full bg-[#1c2e4d]/10 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
@@ -826,20 +833,20 @@ export default function Home() {
               >
                 {/* Eyebrow Badge */}
                 <motion.div variants={reveal} className="mb-5">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-[#c59b27]/35 bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#9e7420] shadow-xs">
-                    <span className="size-1.5 rounded-full bg-[#c59b27] animate-pulse" />
-                    AGENOR LUCENA ADVOCACIA · PITANGUI - MG · OAB/MG 217.363
+                  <span className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.16em] uppercase text-[#141f33] shadow-xs">
+                    <span className="size-1.5 rounded-full bg-[#1c2e4d] animate-pulse" />
+                    RONALDO GILIARD ADVOCACIA · CAMPO BELO - MG · OAB/MG 218.682
                   </span>
                 </motion.div>
 
                 {/* H1 Headline */}
                 <motion.h1
                   variants={reveal}
-                  className="font-serif text-3xl leading-[1.16] font-bold tracking-tight text-[#0a0e17] sm:text-5xl lg:text-[3.25rem]"
+                  className="font-serif text-3xl leading-[1.16] font-bold tracking-tight text-[#0b0f17] sm:text-5xl lg:text-[3.25rem]"
                 >
-                  Defesa Estratégica e Resolutiva nas Áreas{" "}
-                  <span className="bg-gradient-to-r from-[#785813] via-[#c59b27] to-[#9e7420] bg-clip-text text-transparent">
-                    Cível e Trabalhista.
+                  Defesa Combativa e Alta Agilidade nas Áreas{" "}
+                  <span className="bg-gradient-to-r from-[#141f33] via-[#1c2e4d] to-[#263e68] bg-clip-text text-transparent">
+                    Cível e Criminal.
                   </span>
                 </motion.h1>
 
@@ -848,10 +855,11 @@ export default function Home() {
                   variants={reveal}
                   className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg lg:max-w-xl"
                 >
-                  Advocacia moderna, ética e combativa liderada pelo{" "}
-                  <strong className="font-semibold text-slate-900">Dr. Alexandre Abreu Lúcio (Agenor Lucena)</strong>,{" "}
-                  <span className="text-slate-800 font-medium">Presidente da Comissão da OAB Jovem de Pitangui</span>. Atendimento humanizado com o conceito de{" "}
-                  <strong className="font-semibold text-slate-900">Direito Explicado</strong> — clareza, combatividade e sem juridiquês para proteger o seu trabalho, sua família e seu patrimônio.
+                  Advocacia de excelência liderada pelo{" "}
+                  <strong className="font-semibold text-slate-900">Dr. Ronaldo Giliard</strong>, Bacharel em Direito pela{" "}
+                  <span className="text-slate-800 font-medium">PUC Minas Arcos</span> e inscrito na{" "}
+                  <strong className="font-semibold text-slate-900">OAB/MG 218.682</strong>. Reconhecido pela nota máxima de{" "}
+                  <strong className="font-semibold text-slate-900">5,0 estrelas no Google</strong> por sua velocidade em resolver problemas (&quot;speed in the process&quot;), ética exemplar e atendimento próximo.
                 </motion.p>
 
                 {/* Quick Highlights Pills */}
@@ -860,42 +868,42 @@ export default function Home() {
                   className="mt-6 flex flex-wrap gap-2.5 sm:gap-3"
                 >
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
-                    <CheckCircle2 size={13} className="text-[#c59b27]" />
-                    Rescisão Indireta & Horas Extras
+                    <CheckCircle2 size={13} className="text-[#1c2e4d]" />
+                    Plantão Criminal 24h & Flagrante
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
-                    <CheckCircle2 size={13} className="text-[#c59b27]" />
-                    Contratos & Cobranças Cíveis
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
-                    <CheckCircle2 size={13} className="text-[#c59b27]" />
+                    <CheckCircle2 size={13} className="text-[#1c2e4d]" />
                     Danos Morais & Negativação Indevida
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
-                    <CheckCircle2 size={13} className="text-[#c59b27]" />
+                    <CheckCircle2 size={13} className="text-[#1c2e4d]" />
                     Divórcio & Inventário em Cartório
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-200/80 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
+                    <CheckCircle2 size={13} className="text-[#1c2e4d]" />
+                    Speed in the Process (Rapidez Comprovada)
                   </span>
                 </motion.div>
 
-                {/* Action CTAs */}
+                {/* Action CTAs (Oxford Navy matching tie) */}
                 <motion.div
                   variants={reveal}
                   className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center"
                 >
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de agendar uma consulta sobre meu caso Cível ou Trabalhista.")}
+                    href={getWhatsAppUrl("Olá, Dr. Ronaldo Giliard! Gostaria de agendar uma consulta jurídica especializada sobre meu caso.")}
                     target="_blank"
-                    variant="gold"
+                    variant="navy"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={18} />
-                    <span>Fale com o Dr. Alexandre no WhatsApp</span>
+                    <span>Fale com o Dr. Ronaldo no WhatsApp</span>
                   </GlowingButton>
 
                   <GlowingButton
                     href="#servicos"
-                    variant="champagne"
+                    variant="light"
                     size="lg"
                     className="w-full sm:w-auto"
                   >
@@ -909,7 +917,7 @@ export default function Home() {
                   variants={reveal}
                   className="mt-10 flex items-center gap-4 rounded-xl border border-slate-200/80 bg-white/95 p-3.5 shadow-xs backdrop-blur-xs max-w-lg"
                 >
-                  <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-[#0c121e] text-white">
+                  <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-[#0b0f17] text-white">
                     <GoogleIcon size={20} />
                   </div>
                   <div className="text-xs">
@@ -922,13 +930,13 @@ export default function Home() {
                       </span>
                     </div>
                     <p className="mt-0.5 text-slate-600">
-                      Avaliação máxima com <strong className="font-semibold text-slate-900">39 avaliações de clientes verificados</strong> em Pitangui - MG e região.
+                      Classificação máxima com <strong className="font-semibold text-slate-900">35 avaliações 5 estrelas</strong> em Campo Belo - MG e toda a região.
                     </p>
                   </div>
                 </motion.div>
               </motion.div>
 
-              {/* Right Column: Hero Photo of Dr. Alexandre Abreu Lúcio */}
+              {/* Right Column: Hero Photo of Dr. Ronaldo Giliard */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.96, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -936,30 +944,31 @@ export default function Home() {
                 className="lg:col-span-5"
               >
                 <div className="relative mx-auto max-w-md lg:max-w-none">
-                  {/* Outer Frame with Gold Rim Accent */}
-                  <div className="group relative overflow-hidden rounded-2xl border-2 border-[#c59b27]/40 bg-gradient-to-b from-[#172136] to-[#080c14] p-2 shadow-2xl shadow-[#0c121e]/25 transition-all duration-300 hover:border-[#c59b27]">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#0c121e]">
+                  {/* Outer Frame with Metallic Platinum Rim Accent */}
+                  <div className="group relative overflow-hidden rounded-2xl border-2 border-slate-300 bg-gradient-to-b from-[#1c2e4d] to-[#0b0f17] p-2 shadow-2xl shadow-slate-900/20 transition-all duration-300 hover:border-[#263e68]">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#0b0f17]">
                       <Image
                         src={FOTO_HERO_SRC}
-                        alt="Dr. Alexandre Abreu Lúcio — Agenor Lucena Advocacia Pitangui MG"
+                        alt="Dr. Ronaldo Giliard — Ronaldo Giliard Advocacia Campo Belo MG"
                         fill
                         className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-102"
                         priority
+                        unoptimized
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 480px"
                       />
 
                       {/* Subtle Bottom Vignette */}
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#080c14]/85 via-transparent to-transparent" />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06090e]/85 via-transparent to-transparent" />
 
-                      {/* Floating Badge on Photo: Dr. Alexandre Abreu Lúcio */}
-                      <div className="absolute right-3.5 bottom-3.5 left-3.5 rounded-xl border border-white/20 bg-[#0c121e]/92 p-3.5 text-white shadow-xl backdrop-blur-md">
+                      {/* Floating Badge on Photo: Dr. Ronaldo Giliard */}
+                      <div className="absolute right-3.5 bottom-3.5 left-3.5 rounded-xl border border-white/20 bg-[#0b0f17]/92 p-3.5 text-white shadow-xl backdrop-blur-md">
                         <div className="flex items-center justify-between gap-2">
                           <div>
                             <p className="font-serif text-sm font-bold tracking-wide text-white">
-                              Dr. Alexandre Abreu Lúcio
+                              Dr. Ronaldo Giliard
                             </p>
-                            <p className="text-[11px] font-medium text-[#f5de88]">
-                              OAB/MG 217.363 · Pres. OAB Jovem Pitangui
+                            <p className="text-[11px] font-medium text-slate-300">
+                              OAB/MG 218.682 · Bacharel PUC Minas Arcos
                             </p>
                           </div>
                           <div className="flex items-center gap-1.5">
@@ -968,8 +977,8 @@ export default function Home() {
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex size-8 items-center justify-center rounded-lg bg-white/10 text-white transition-colors hover:bg-white/20"
-                              aria-label="Instagram do Dr. Alexandre Abreu Lúcio"
-                              title="@agenor_lucena"
+                              aria-label="Instagram do Dr. Ronaldo Giliard"
+                              title="@giliardadv"
                             >
                               <InstagramIcon size={16} />
                             </a>
@@ -977,7 +986,7 @@ export default function Home() {
                               href={GOOGLE_SEARCH_URL}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex size-8 items-center justify-center rounded-lg bg-[#c59b27]/20 text-[#f5de88] transition-colors hover:bg-[#c59b27]/30"
+                              className="inline-flex size-8 items-center justify-center rounded-lg bg-white/10 text-slate-200 transition-colors hover:bg-white/20"
                               aria-label="Google Meu Negócio"
                               title="5,0 no Google"
                             >
@@ -991,22 +1000,22 @@ export default function Home() {
 
                   {/* Floating Trust Card Badge (Top Right) */}
                   <div className="absolute -top-4 -right-4 hidden rounded-xl border border-slate-200/90 bg-white p-3 shadow-lg sm:flex items-center gap-2.5">
-                    <div className="flex size-9 items-center justify-center rounded-lg bg-[#fdf8eb] text-[#9e7420]">
+                    <div className="flex size-9 items-center justify-center rounded-lg bg-[#141f33] text-white">
                       <Landmark size={18} />
                     </div>
                     <div>
-                      <p className="text-[11px] font-bold text-slate-900">Praça Dr. Isauro Epifânio</p>
-                      <p className="text-[10px] text-slate-500">Pitangui · MG</p>
+                      <p className="text-[11px] font-bold text-slate-900">R. João Pinheiro, 356</p>
+                      <p className="text-[10px] text-slate-500">Campo Belo · MG</p>
                     </div>
                   </div>
 
-                  {/* Floating Trust Card Badge (Bottom Left) */}
+                  {/* Floating Trust Card Badge (Bottom Left - Navy styled) */}
                   <div className="absolute -bottom-4 -left-4 hidden rounded-xl border border-slate-200/90 bg-white p-3 shadow-lg sm:flex items-center gap-2.5">
-                    <div className="flex size-9 items-center justify-center rounded-lg bg-[#25D366]/10 text-[#25D366]">
+                    <div className="flex size-9 items-center justify-center rounded-lg bg-[#1c2e4d]/10 text-[#1c2e4d]">
                       <WhatsAppIcon size={18} />
                     </div>
                     <div>
-                      <p className="text-[11px] font-bold text-slate-900">Resposta Rápida</p>
+                      <p className="text-[11px] font-bold text-slate-900">Plantão e WhatsApp</p>
                       <p className="text-[10px] text-slate-500">{PHONE_DISPLAY}</p>
                     </div>
                   </div>
@@ -1019,11 +1028,11 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 2: BARRA DE AUTORIDADE & MÉTRICAS COMPROVADAS      */}
         {/* ======================================================== */}
-        <section className="border-y border-[#121929] bg-[#0c121e] py-9 text-white">
+        <section className="border-y border-[#1e293b] bg-[#0b0f17] py-9 text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
               {/* Stat 1 */}
-              <div className="flex flex-col border-l-2 border-[#c59b27] pl-4 sm:pl-5">
+              <div className="flex flex-col border-l-2 border-[#263e68] pl-4 sm:pl-5">
                 <div className="flex items-center gap-1 text-[#f59e0b]">
                   <Star size={16} className="fill-[#f59e0b]" />
                   <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
@@ -1031,33 +1040,33 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  39 Avaliações no Google
+                  35 Avaliações no Google
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
-                  Nota máxima de satisfação em Pitangui - MG
+                  100% de satisfação em Campo Belo - MG
                 </p>
               </div>
 
               {/* Stat 2 */}
-              <div className="flex flex-col border-l-2 border-[#c59b27] pl-4 sm:pl-5">
+              <div className="flex flex-col border-l-2 border-[#263e68] pl-4 sm:pl-5">
                 <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
-                  Trabalhista
+                  Criminal
                 </span>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  Defesa de Direitos
+                  Plantão 24 Horas
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
-                  Rescisões, horas extras e acordos na Justiça
+                  Delegacia, custódia, júri e liberdade provisória
                 </p>
               </div>
 
               {/* Stat 3 */}
-              <div className="flex flex-col border-l-2 border-[#c59b27] pl-4 sm:pl-5">
+              <div className="flex flex-col border-l-2 border-[#263e68] pl-4 sm:pl-5">
                 <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
                   Cível
                 </span>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  Contratos & Indenizações
+                  Indenizações & Contratos
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
                   Danos morais, consumidor, família e cartório
@@ -1065,15 +1074,15 @@ export default function Home() {
               </div>
 
               {/* Stat 4 */}
-              <div className="flex flex-col border-l-2 border-[#c59b27] pl-4 sm:pl-5">
+              <div className="flex flex-col border-l-2 border-[#263e68] pl-4 sm:pl-5">
                 <span className="font-serif text-2xl font-bold text-white sm:text-3xl">
-                  OAB Jovem
+                  PUC Minas
                 </span>
                 <p className="mt-1 text-xs font-bold tracking-wider text-slate-200 uppercase">
-                  Liderança em Pitangui
+                  Formação de Excelência
                 </p>
                 <p className="mt-0.5 text-[11px] text-slate-400">
-                  Presidente da Comissão · OAB/MG 217.363
+                  Arcos-MG · OAB/MG 218.682
                 </p>
               </div>
             </div>
@@ -1083,21 +1092,21 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 3: ÁREAS DE ATUAÇÃO (SERVIÇOS COM MODAL DETALHADO)  */}
         {/* ======================================================== */}
-        <section id="servicos" className="py-20 sm:py-26 bg-[#fcfbf9]">
+        <section id="servicos" className="py-20 sm:py-26 bg-[#f8fafc]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-12">
               <Heading
                 eyebrow="Áreas de Atuação Especializada"
-                description="Soluções jurídicas combativas focadas nas áreas Cível e Trabalhista, com clareza, transparência e sem burocracia inútil. Clique em qualquer área para ver os detalhes e procedimentos inclusos."
+                description="Soluções jurídicas combativas focadas nas áreas Cível e Criminal, com rigor técnico, atendimento ágil e defesa intransigente dos seus direitos. Clique em qualquer área para ver os procedimentos detalhados."
               >
-                Defesa Técnica e Resolutiva Para Você, Seu Trabalho e Sua Empresa
+                Defesa Técnica e Resolutiva Para Você, Sua Liberdade e Seu Patrimônio
               </Heading>
 
               <div className="shrink-0">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de consultar sobre a viabilidade do meu caso.")}
+                  href={getWhatsAppUrl("Olá, Dr. Ronaldo Giliard! Gostaria de consultar sobre a viabilidade do meu caso.")}
                   target="_blank"
-                  variant="gold"
+                  variant="navy"
                   size="md"
                 >
                   <WhatsAppIcon size={16} />
@@ -1116,21 +1125,21 @@ export default function Home() {
                     whileHover={{ y: -4 }}
                     transition={{ duration: 0.2 }}
                     onClick={() => setSelectedPractice(area)}
-                    className="group relative flex flex-col justify-between rounded-xl border border-slate-200/90 bg-white p-7 shadow-xs transition-all duration-300 hover:border-[#c59b27]/60 hover:shadow-lg cursor-pointer"
+                    className="group relative flex flex-col justify-between rounded-xl border border-slate-200/90 bg-white p-7 shadow-xs transition-all duration-300 hover:border-[#1c2e4d] hover:shadow-lg cursor-pointer"
                   >
                     <div>
                       {/* Top Bar: Icon + Category Tag */}
                       <div className="flex items-start justify-between gap-4 mb-5">
-                        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#0c121e] text-[#f5de88] shadow-xs transition-colors group-hover:bg-[#172136]">
+                        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#141f33] text-white shadow-xs transition-colors group-hover:bg-[#1c2e4d]">
                           <IconComponent size={22} />
                         </div>
-                        <span className="rounded-full bg-[#fdf8eb] px-2.5 py-1 text-[10px] font-bold text-[#8e6319]">
+                        <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-bold text-slate-700">
                           {area.tag.split("·")[0].trim()}
                         </span>
                       </div>
 
                       {/* Title */}
-                      <h3 className="font-serif text-xl font-bold tracking-tight text-[#0a0e17] group-hover:text-[#9e7420] transition-colors">
+                      <h3 className="font-serif text-xl font-bold tracking-tight text-[#0b0f17] group-hover:text-[#1c2e4d] transition-colors">
                         {area.title}
                       </h3>
 
@@ -1146,7 +1155,7 @@ export default function Home() {
                     </div>
 
                     {/* Bottom CTA trigger */}
-                    <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#9e7420]">
+                    <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#141f33]">
                       <span>Ver detalhes e procedimentos</span>
                       <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                     </div>
@@ -1169,7 +1178,7 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setSelectedPractice(null)}
-                className="absolute inset-0 bg-[#080c14]/80 backdrop-blur-sm"
+                className="absolute inset-0 bg-[#06090e]/80 backdrop-blur-sm"
               />
 
               {/* Modal Box */}
@@ -1192,55 +1201,51 @@ export default function Home() {
 
                 {/* Modal Header */}
                 <div className="pr-10">
-                  <span className="inline-block rounded-full bg-[#fdf8eb] px-3 py-1 text-xs font-bold text-[#8e6319]">
+                  <span className="inline-block rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-700">
                     {selectedPractice.tag}
                   </span>
-                  <h3 className="font-serif text-2xl font-bold tracking-tight text-[#0a0e17] sm:text-3xl mt-3">
+                  <h3 className="font-serif text-2xl font-bold tracking-tight text-[#0b0f17] sm:text-3xl mt-3">
                     {selectedPractice.title}
                   </h3>
-                  <p className="mt-1.5 text-xs text-slate-500">
+                  <p className="mt-2 text-xs font-medium text-slate-500">
                     {selectedPractice.category}
                   </p>
                 </div>
 
-                {/* Modal Body */}
-                <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-700">
-                  <p className="font-medium text-slate-900">
-                    {selectedPractice.summary}
-                  </p>
-                  <p className="text-slate-600">
-                    {selectedPractice.details}
-                  </p>
-
-                  <div className="pt-2">
-                    <h4 className="font-serif text-sm font-bold tracking-wider text-[#0a0e17] uppercase mb-3">
-                      Atuação e Procedimentos Inclusos:
-                    </h4>
-                    <ul className="space-y-2.5">
-                      {selectedPractice.topics.map((topic, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
-                          <CheckCircle2 size={16} className="text-[#c59b27] shrink-0 mt-0.5" />
-                          <span>{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                {/* Description */}
+                <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-5">
+                  <p>{selectedPractice.details}</p>
                 </div>
 
-                {/* Modal Footer CTAs */}
-                <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-3 items-center justify-between">
-                  <p className="text-xs text-slate-500 text-center sm:text-left">
-                    Sede em Pitangui - MG ou Atendimento Online Nacional
-                  </p>
+                {/* Topics / Bullet Points */}
+                <div className="mt-6 border-t border-slate-100 pt-5">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 mb-3">
+                    Principais Procedimentos & Medidas Judiciais
+                  </h4>
+                  <ul className="space-y-2.5">
+                    {selectedPractice.topics.map((topic, i) => (
+                      <li key={i} className="flex items-start gap-2.5 text-xs text-slate-700 leading-relaxed">
+                        <CheckCircle2 size={15} className="text-[#1c2e4d] shrink-0 mt-0.5" />
+                        <span>{topic}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Modal Footer CTA */}
+                <div className="mt-8 border-t border-slate-100 pt-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <span className="text-xs text-slate-500">
+                    Atendimento presencial em Campo Belo - MG ou digital seguro.
+                  </span>
                   <GlowingButton
                     href={getWhatsAppUrl(selectedPractice.whatsAppText)}
                     target="_blank"
-                    variant="gold"
+                    variant="navy"
                     size="md"
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={16} />
-                    <span>Consultar Dr. Alexandre</span>
+                    <span>Consultar Dr. Ronaldo</span>
                   </GlowingButton>
                 </div>
               </motion.div>
@@ -1249,33 +1254,34 @@ export default function Home() {
         </AnimatePresence>
 
         {/* ======================================================== */}
-        {/* DOBRA 4: SOBRE O ESCRITÓRIO & DR. ALEXANDRE ABREU LÚCIO  */}
+        {/* DOBRA 4: SOBRE O ADVOGADO DR. RONALDO GILIARD            */}
         {/* ======================================================== */}
-        <section id="sobre" className="py-20 sm:py-26 border-t border-slate-200 bg-[#f6f3eb]">
+        <section id="sobre" className="py-20 sm:py-26 border-t border-slate-200 bg-[#f1f5f9]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
               {/* Photo Column */}
               <div className="lg:col-span-5">
                 <div className="relative mx-auto max-w-md lg:max-w-none">
-                  <div className="relative overflow-hidden rounded-2xl border-2 border-[#c59b27]/40 bg-[#0c121e] p-2 shadow-xl shadow-slate-300">
-                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#121929]">
+                  <div className="relative overflow-hidden rounded-2xl border-2 border-slate-300 bg-[#0b0f17] p-2 shadow-xl shadow-slate-300">
+                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#0f172a]">
                       <Image
                         src={FOTO_PORTRAIT_SRC}
-                        alt="Dr. Alexandre Abreu Lúcio — Agenor Lucena Advocacia"
+                        alt="Dr. Ronaldo Giliard — Ronaldo Giliard Advocacia e Consultoria Jurídica"
                         fill
                         className="object-cover object-top"
+                        unoptimized
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 420px"
                       />
                     </div>
                   </div>
 
                   {/* Decorative Badge */}
-                  <div className="absolute -bottom-5 -right-5 hidden sm:block rounded-xl border border-[#c59b27]/50 bg-[#0c121e] p-4 text-white shadow-xl max-w-xs">
-                    <p className="text-[11px] font-bold text-[#f5de88] uppercase tracking-wider">
-                      Agenor Lucena Advocacia
+                  <div className="absolute -bottom-5 -right-5 hidden sm:block rounded-xl border border-slate-700 bg-[#0b0f17] p-4 text-white shadow-xl max-w-xs">
+                    <p className="text-[11px] font-bold text-slate-200 uppercase tracking-wider">
+                      Ronaldo Giliard Advocacia
                     </p>
                     <p className="mt-1 text-xs text-slate-300 leading-snug">
-                      &quot;Cível e Trabalhista com rigor técnico, atendimento humanizado e Direito Explicado.&quot;
+                      &quot;Cível e Criminal com combatividade, ética irrestrita e rapidez comprovada na solução dos processos.&quot;
                     </p>
                   </div>
                 </div>
@@ -1284,41 +1290,41 @@ export default function Home() {
               {/* Text Column */}
               <div className="lg:col-span-7">
                 <Heading
-                  eyebrow="Sobre o Profissional & Liderança"
-                  description="Com atuação ética, inteligente e combativa, o Dr. Alexandre Abreu Lúcio consolidou-se como referência na advocacia Cível e Trabalhista em Pitangui e na região centro-oeste mineira."
+                  eyebrow="Sobre o Profissional & Trajetória"
+                  description="Com atuação ética, combativa e reconhecida celeridade, o Dr. Ronaldo Giliard consolidou-se como um dos advogados mais bem avaliados de Campo Belo e de todo o Centro-Oeste / Sul de Minas."
                 >
-                  Dr. Alexandre Abreu Lúcio: Rigor Técnico, Clareza e Proximidade
+                  Dr. Ronaldo Giliard: Rigor Técnico, Agilidade e Defesa Intransigente
                 </Heading>
 
                 <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-700 sm:text-base">
                   <p>
-                    O <strong className="font-semibold text-slate-900">Dr. Alexandre Abreu Lúcio (Agenor Lucena) · OAB/MG 217.363</strong> atua com a convicção de que a verdadeira advocacia de excelência une preparação jurídica de ponta, combatividade nos tribunais e comunicação clara com o cliente.
+                    O <strong className="font-semibold text-slate-900">Dr. Ronaldo Giliard · OAB/MG 218.682</strong> é graduado em Direito pela conceituada <strong className="font-semibold text-slate-900">PUC Minas (Arcos - MG)</strong>, aliando sólida base acadêmica à prática forense combativa no Direito Cível, Criminal e Consultoria Jurídica.
                   </p>
                   <p>
-                    Como <strong className="font-semibold text-slate-900">Presidente da Comissão da OAB Jovem da 47ª Subseção de Pitangui / MG</strong>, exerce papel ativo no fortalecimento da classe jurídica e na defesa incansável das prerrogativas profissionais, trazendo essa mesma energia e seriedade para cada causa sob seus cuidados.
+                    Sua atuação é marcada pelo compromisso inegociável com a liberdade e o patrimônio de cada constituinte. O Dr. Ronaldo atua pessoalmente em cada fase processual, acompanhando desde diligências de emergência em delegacias até sustentações perante os Tribunais de Justiça.
                   </p>
                   <p>
-                    Reconhecido pelos próprios clientes pela <strong className="font-semibold text-slate-900">inteligência, perspicácia e capacidade de se comunicar na linguagem de quem precisa de suporte</strong>, desenvolveu o projeto <strong className="font-semibold text-slate-900">&quot;📚 Direito Explicado&quot;</strong>, desmistificando o juridiquês e assegurando que cada cliente compreenda exatamente seus direitos e participe conscientemente das estratégias do processo.
+                    O principal traço destacado pelos clientes é a <strong className="font-semibold text-slate-900">rapidez na resolução das causas (&quot;speed in the process&quot;)</strong>, a clareza nas orientações e a condução honesta com preço justo — atributos que se traduzem na nota máxima unânime de <strong className="font-semibold text-slate-900">5,0 estrelas no Google em 35 avaliações</strong>.
                   </p>
                   <p>
-                    Com sede própria localizada na <strong className="font-semibold text-slate-900">Praça Dr. Isauro Epifânio, 141 (Bairro São Francisco, Pitangui - MG)</strong> e infraestrutura digital para atendimento online em todo o Brasil, mantém a nota unânime de <strong className="font-semibold text-slate-900">5,0 estrelas no Google (39 avaliações)</strong>.
+                    Com escritório próprio estabelecido na <strong className="font-semibold text-slate-900">R. João Pinheiro, 356 (Centro de Campo Belo - MG)</strong> e atendimento digital seguro para todo o território nacional, assegura aos seus clientes tranquilidade, suporte contínuo e defesa técnica de primeira grandeza.
                   </p>
                 </div>
 
                 {/* Key Points */}
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-3.5 shadow-2xs">
-                    <Briefcase size={18} className="text-[#c59b27] shrink-0 mt-0.5" />
+                    <Gavel size={18} className="text-[#1c2e4d] shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-xs font-bold text-slate-900 uppercase">Cível & Trabalhista</h4>
-                      <p className="text-xs text-slate-600 mt-0.5">Defesa ampla do trabalhador, empresas, contratos e indenizações.</p>
+                      <h4 className="text-xs font-bold text-slate-900 uppercase">Cível & Criminal</h4>
+                      <p className="text-xs text-slate-600 mt-0.5">Defesa penal especializada, plantão em delegacia e causas cíveis indenizatórias.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-3.5 shadow-2xs">
-                    <BookOpen size={18} className="text-[#c59b27] shrink-0 mt-0.5" />
+                    <Zap size={18} className="text-[#1c2e4d] shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-xs font-bold text-slate-900 uppercase">📚 Direito Explicado</h4>
-                      <p className="text-xs text-slate-600 mt-0.5">Explicação transparente e linguagem descomplicada em cada etapa.</p>
+                      <h4 className="text-xs font-bold text-slate-900 uppercase">⚡ Speed in the Process</h4>
+                      <p className="text-xs text-slate-600 mt-0.5">Agilidade real na tramitação, diligências frequentes e foco em resultados sem demora.</p>
                     </div>
                   </div>
                 </div>
@@ -1326,21 +1332,21 @@ export default function Home() {
                 {/* CTA Buttons */}
                 <div className="mt-8 pt-4 flex flex-col sm:flex-row gap-3.5 items-center">
                   <GlowingButton
-                    href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de conversar diretamente sobre a minha demanda.")}
+                    href={getWhatsAppUrl("Olá, Dr. Ronaldo Giliard! Gostaria de conversar diretamente sobre a minha demanda.")}
                     target="_blank"
-                    variant="gold"
+                    variant="navy"
                     size="md"
                     className="w-full sm:w-auto"
                   >
                     <WhatsAppIcon size={16} />
-                    <span>Falar com o Dr. Alexandre no WhatsApp</span>
+                    <span>Falar com o Dr. Ronaldo no WhatsApp</span>
                   </GlowingButton>
 
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-[#9e7420] transition-colors"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-[#141f33] transition-colors"
                   >
                     <InstagramIcon size={16} />
                     <span>Seguir {INSTAGRAM_HANDLE} ({INSTAGRAM_STATS})</span>
@@ -1354,66 +1360,66 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 5: OS 4 PILARES DA ADVOCACIA                       */}
         {/* ======================================================== */}
-        <section id="diferenciais" className="py-20 sm:py-26 bg-[#0c121e] text-white">
+        <section id="diferenciais" className="py-20 sm:py-26 bg-[#0b0f17] text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Heading
               eyebrow="Nossos Diferenciais"
-              description="Os pilares que sustentam a reputação ilibada, a satisfação máxima e os resultados expressivos de Agenor Lucena Advocacia."
+              description="Os pilares que sustentam a autoridade, a reputação 5 estrelas e os resultados expressivos alcançados por Ronaldo Giliard Advocacia."
               dark
             >
-              Os 4 Pilares da Agenor Lucena Advocacia
+              Os 4 Pilares de Ronaldo Giliard Advocacia
             </Heading>
 
             <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {/* Pillar 1 */}
-              <div className="rounded-xl border border-[#172136] bg-[#121929]/80 p-6 transition-all duration-300 hover:border-[#c59b27]/50 hover:bg-[#121929]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#172136] text-[#f5de88]">
-                  <BookOpen size={24} />
+              <div className="rounded-xl border border-[#1e293b] bg-[#141e33]/80 p-6 transition-all duration-300 hover:border-[#263e68] hover:bg-[#141e33]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#1e293b] text-white">
+                  <Zap size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  1. Direito Explicado Sem Juridiquês
+                  1. Speed in the Process (Celeridade)
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Comunicação clara, acessível e direta. Você entende cada movimento do seu processo sem palavras difíceis ou termos ininteligíveis.
+                  Agilidade e presteza nos andamentos judiciais. Diligências constantes perante cartórios e juizados para assegurar a resolução mais rápida possível.
                 </p>
               </div>
 
               {/* Pillar 2 */}
-              <div className="rounded-xl border border-[#172136] bg-[#121929]/80 p-6 transition-all duration-300 hover:border-[#c59b27]/50 hover:bg-[#121929]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#172136] text-[#f5de88]">
-                  <Gavel size={24} />
+              <div className="rounded-xl border border-[#1e293b] bg-[#141e33]/80 p-6 transition-all duration-300 hover:border-[#263e68] hover:bg-[#141e33]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#1e293b] text-white">
+                  <Siren size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  2. Combatividade & Agilidade
+                  2. Plantão Criminal 24h & Combatividade
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Postura firme perante as Varas do Trabalho e Varas Cíveis. Estratégias processuais assertivas para alcançar o melhor resultado no menor tempo.
+                  Prontidão técnica para atender urgências penais, delegacias e flagrantes a qualquer hora do dia ou da noite, defendendo a liberdade sem hesitação.
                 </p>
               </div>
 
               {/* Pillar 3 */}
-              <div className="rounded-xl border border-[#172136] bg-[#121929]/80 p-6 transition-all duration-300 hover:border-[#c59b27]/50 hover:bg-[#121929]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#172136] text-[#f5de88]">
+              <div className="rounded-xl border border-[#1e293b] bg-[#141e33]/80 p-6 transition-all duration-300 hover:border-[#263e68] hover:bg-[#141e33]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#1e293b] text-white">
                   <Shield size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  3. Ética & Atendimento Humanizado
+                  3. Integridade, Ética & Preço Justo
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Respeito absoluto à sua história, confidencialidade total e atendimento acolhedor reconhecido por dezenas de avaliações espontâneas.
+                  Transparência total nos honorários e na avaliação de riscos. Honestidade comprovada pelos depoimentos de clientes que confiam no trabalho.
                 </p>
               </div>
 
               {/* Pillar 4 */}
-              <div className="rounded-xl border border-[#172136] bg-[#121929]/80 p-6 transition-all duration-300 hover:border-[#c59b27]/50 hover:bg-[#121929]">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#172136] text-[#f5de88]">
+              <div className="rounded-xl border border-[#1e293b] bg-[#141e33]/80 p-6 transition-all duration-300 hover:border-[#263e68] hover:bg-[#141e33]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#1e293b] text-white">
                   <Landmark size={24} />
                 </div>
                 <h3 className="mt-5 font-serif text-lg font-bold text-white">
-                  4. Sede em Pitangui & Online
+                  4. Sede em Campo Belo & Digital Nacional
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-300">
-                  Escritório presencial na Praça Dr. Isauro Epifânio, 141 (Bairro São Francisco) e estrutura digital para atender clientes de qualquer comarca.
+                  Escritório presencial na R. João Pinheiro, 356 (Centro) e moderna estrutura de atendimento virtual para clientes em todo o território nacional.
                 </p>
               </div>
             </div>
@@ -1423,14 +1429,14 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 6: PROVA SOCIAL & DEPOIMENTOS REAIS GOOGLE 5,0 ★   */}
         {/* ======================================================== */}
-        <section id="depoimentos" className="py-20 sm:py-26 bg-[#fcfbf9]">
+        <section id="depoimentos" className="py-20 sm:py-26 bg-[#f8fafc]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-6">
               <Heading
                 eyebrow="Prova Social Verificada"
-                description="Confira avaliações 100% autênticas e espontâneas de clientes atendidos pelo Escritório de Advocacia - Dr. Alexandre Abreu Lúcio no Google Meu Negócio."
+                description="Confira avaliações 100% autênticas e espontâneas de clientes atendidos por Ronaldo Giliard Advocacia e Consultoria Jurídica no Google Meu Negócio."
               >
-                Avaliações com Nota Máxima de 5,0 ★ no Google em Pitangui · MG
+                Avaliações com Nota Máxima de 5,0 ★ no Google em Campo Belo · MG
               </Heading>
 
               <div className="flex flex-wrap items-center gap-3">
@@ -1438,7 +1444,7 @@ export default function Home() {
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-800 shadow-xs hover:border-[#c59b27] hover:text-[#9e7420] transition-colors"
+                  className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-800 shadow-xs hover:border-[#1c2e4d] hover:text-[#141f33] transition-colors"
                 >
                   <GoogleIcon size={16} />
                   <span>Ver perfil no Google Meu Negócio</span>
@@ -1448,151 +1454,87 @@ export default function Home() {
             </div>
 
             {/* Google Badges Extracted directly from Google Reviews Keywords */}
-            <div className="flex flex-wrap items-center gap-2 pt-2 pb-8 border-b border-slate-100">
-              <span className="text-xs font-bold text-slate-500 mr-1">
-                Destaques Google:
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                ⚖️ Ética & Respeito (ethics)
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                👨‍💼 Competência (lawyer)
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                💡 Inteligente & Perspicaz (inteligente)
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                🗣️ Comunicação Humanizada
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#c59b27]/30 bg-[#fdf8eb] px-3 py-1 text-xs font-semibold text-[#8e6319]">
-                ⭐ 100% Avaliações 5 Estrelas (39 reviews)
-              </span>
+            <div className="flex flex-wrap gap-2 pb-8 border-b border-slate-200">
+              {reviewCategories.map((cat) => (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => {
+                    setSelectedReviewCategory(cat);
+                    setShowAllReviews(false);
+                  }}
+                  className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
+                    selectedReviewCategory === cat
+                      ? "bg-[#141f33] text-white shadow-xs"
+                      : "bg-white border border-slate-200 text-slate-600 hover:border-[#1c2e4d] hover:text-[#141f33]"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
             </div>
 
-            {/* Category Filter Pills */}
-            <div className="mt-8 flex flex-wrap gap-2">
-              {reviewCategories.map((cat) => {
-                const isActive = selectedReviewCategory === cat;
-                return (
-                  <button
-                    key={cat}
-                    type="button"
-                    onClick={() => {
-                      setSelectedReviewCategory(cat);
-                      setShowAllReviews(false);
-                    }}
-                    className={`rounded-lg px-3.5 py-1.5 text-xs font-bold transition-all cursor-pointer ${
-                      isActive
-                        ? "bg-[#0c121e] text-white shadow-xs"
-                        : "border border-slate-200 bg-white text-slate-600 hover:border-[#c59b27] hover:text-slate-900"
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Testimonials Grid */}
+            {/* Reviews Cards Grid */}
             <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {displayedReviews.map((review, idx) => {
-                const initials = review.name
-                  .split(" ")
-                  .slice(0, 2)
-                  .map((n) => n[0])
-                  .join("")
-                  .toUpperCase();
-
-                return (
-                  <motion.div
-                    key={`${review.name}-${idx}`}
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: idx * 0.05 }}
-                    className="flex flex-col justify-between rounded-xl border border-slate-200/90 bg-white p-6 shadow-xs transition-all hover:border-[#c59b27]/50 hover:shadow-md"
-                  >
-                    <div>
-                      {/* Top Bar: Author, Status, Rating & Date */}
-                      <div className="flex items-start justify-between gap-3 mb-4">
-                        <div className="flex items-center gap-2.5">
-                          <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#0c121e] text-xs font-bold text-[#f5de88] border border-[#c59b27]/40">
-                            {initials}
-                          </div>
-                          <div>
-                            <p className="text-xs font-bold text-slate-900 leading-tight">
-                              {review.name}
-                            </p>
-                            <p className="text-[10px] text-slate-500 font-medium">
-                              {review.badge}
-                            </p>
-                          </div>
+              {displayedReviews.map((rev, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col justify-between rounded-xl border border-slate-200/90 bg-white p-6 shadow-xs transition-all hover:border-[#1c2e4d] hover:shadow-md"
+                >
+                  <div>
+                    {/* Header: Name, Stars, Date */}
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <div className="flex items-center gap-1.5">
+                          <h4 className="font-bold text-sm text-[#0b0f17]">
+                            {rev.name}
+                          </h4>
+                          <span className="size-1 rounded-full bg-slate-300" />
+                          <span className="text-[10px] text-slate-400 font-medium">
+                            {rev.date}
+                          </span>
                         </div>
-
-                        <span className="rounded-full bg-[#fdf8eb] px-2 py-0.5 text-[10px] font-bold text-[#8e6319] shrink-0">
-                          {review.category.split("(")[0].trim()}
-                        </span>
+                        <p className="text-[11px] text-slate-500 mt-0.5">
+                          {rev.badge}
+                        </p>
                       </div>
 
-                      {/* Stars + Time Ago */}
-                      <div className="flex items-center justify-between gap-2 mb-3">
-                        <div className="flex items-center gap-0.5 text-[#f59e0b]">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} size={14} className="fill-[#f59e0b]" />
-                          ))}
-                        </div>
-                        <span className="text-[10px] text-slate-400 font-medium">
-                          {review.date}
-                        </span>
+                      <div className="flex items-center gap-0.5 text-[#f59e0b]">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} size={13} className="fill-[#f59e0b]" />
+                        ))}
                       </div>
-
-                      {/* Highlight Quote */}
-                      <p className="font-serif text-sm font-bold text-[#0a0e17] leading-snug">
-                        &quot;{review.highlight}&quot;
-                      </p>
-
-                      {/* Full Review Text */}
-                      <p className="mt-3 text-xs leading-relaxed text-slate-600">
-                        {review.content}
-                      </p>
-
-                      {/* Owner Reply Box */}
-                      {review.ownerReply && (
-                        <div className="mt-4 rounded-xl border border-[#c59b27]/20 bg-[#f6f3eb] p-3.5 text-xs text-slate-700">
-                          <div className="flex items-center gap-1.5 font-bold text-[#8e6319] mb-1 text-[11px]">
-                            <Sparkles size={13} className="text-[#c59b27]" />
-                            <span>Dr. Alexandre Abreu Lúcio (proprietário)</span>
-                            {review.ownerDate && (
-                              <span className="text-[10px] text-slate-400 font-normal">
-                                · {review.ownerDate}
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-slate-600 italic leading-relaxed text-[11px]">
-                            &quot;{review.ownerReply}&quot;
-                          </p>
-                        </div>
-                      )}
                     </div>
 
-                    {/* Bottom Google Seal */}
-                    <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
-                      <span className="text-[10px] font-semibold text-slate-400">
-                        Avaliação Verificada no Google
-                      </span>
-                      <GoogleIcon size={15} className="opacity-80" />
+                    {/* Review text */}
+                    <p className="mt-4 text-xs sm:text-sm text-slate-700 leading-relaxed italic">
+                      &quot;{rev.content}&quot;
+                    </p>
+                  </div>
+
+                  {/* Owner Reply if available */}
+                  {rev.ownerReply && (
+                    <div className="mt-4 pt-3.5 border-t border-slate-100 rounded-lg bg-slate-50 p-3">
+                      <div className="flex items-center gap-1.5 text-[11px] font-bold text-slate-800">
+                        <BadgeCheck size={13} className="text-[#1c2e4d]" />
+                        <span>Resposta do Dr. Ronaldo Giliard (proprietário):</span>
+                      </div>
+                      <p className="mt-1 text-xs text-slate-600 leading-relaxed">
+                        &quot;{rev.ownerReply}&quot;
+                      </p>
                     </div>
-                  </motion.div>
-                );
-              })}
+                  )}
+                </div>
+              ))}
             </div>
 
-            {/* Bottom Controls */}
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+            {/* Load More Button */}
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               {filteredReviews.length > 6 && (
                 <button
                   type="button"
                   onClick={() => setShowAllReviews(!showAllReviews)}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-xs font-bold text-slate-800 shadow-xs hover:border-[#c59b27] hover:bg-slate-50 transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-xs font-bold uppercase tracking-wider text-slate-800 hover:bg-slate-50 hover:border-[#1c2e4d] transition-colors cursor-pointer"
                 >
                   {showAllReviews ? (
                     <span>Recolher Avaliações</span>
@@ -1607,11 +1549,11 @@ export default function Home() {
               <GlowingButton
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
-                variant="champagne"
+                variant="light"
                 size="md"
               >
                 <GoogleIcon size={15} />
-                <span>Ver Todas as 39 Avaliações no Google Maps</span>
+                <span>Ver Todas as 35 Avaliações no Google</span>
                 <ExternalLink size={13} />
               </GlowingButton>
             </div>
@@ -1621,7 +1563,7 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 7: PASSO A PASSO DO ATENDIMENTO                    */}
         {/* ======================================================== */}
-        <section className="border-t border-slate-200 py-20 sm:py-26 bg-[#f6f3eb]">
+        <section className="border-t border-slate-200 py-20 sm:py-26 bg-[#f1f5f9]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Heading
               eyebrow="Como Funciona"
@@ -1633,62 +1575,62 @@ export default function Home() {
             <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {/* Step 1 */}
               <div className="relative flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-xs">
-                <span className="font-serif text-3xl font-black text-[#c59b27]/40">
+                <span className="font-serif text-3xl font-black text-slate-300">
                   01
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
                   Contato & Sigilo
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Você envia uma mensagem pelo nosso WhatsApp oficial relatando sua situação trabalhista ou cível com total confidencialidade.
+                  Você envia uma mensagem pelo nosso WhatsApp oficial relatando sua situação cível ou criminal com confidencialidade absoluta.
                 </p>
               </div>
 
               {/* Step 2 */}
               <div className="relative flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-xs">
-                <span className="font-serif text-3xl font-black text-[#c59b27]/40">
+                <span className="font-serif text-3xl font-black text-slate-300">
                   02
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
-                  Direito Explicado
+                  Diagnóstico Técnico
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  O Dr. Alexandre analisa documentos e explica seus direitos em linguagem clara, detalhando chances, riscos e opções de acordo.
+                  O Dr. Ronaldo Giliard analisa os documentos e esclarece suas opções jurídicas com franqueza, informando chances, riscos e prazos reais.
                 </p>
               </div>
 
               {/* Step 3 */}
               <div className="relative flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-xs">
-                <span className="font-serif text-3xl font-black text-[#c59b27]/40">
+                <span className="font-serif text-3xl font-black text-slate-300">
                   03
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
                   Ação Célere & Protocolo
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Assinatura prática pelo celular ou presencialmente em Pitangui, com protocolo imediato na Justiça ou negociação extrajudicial.
+                  Assinatura prática pelo celular ou presencialmente em Campo Belo, com protocolo imediato na Justiça ou diligência em delegacia.
                 </p>
               </div>
 
               {/* Step 4 */}
               <div className="relative flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-xs">
-                <span className="font-serif text-3xl font-black text-[#c59b27]/40">
+                <span className="font-serif text-3xl font-black text-slate-300">
                   04
                 </span>
                 <h3 className="mt-2 font-serif text-base font-bold text-slate-900">
                   Acompanhamento Transparente
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                  Você é avisado a cada movimentação e decisão, acompanhando o recebimento das verbas, alvarás ou homologação final do acordo.
+                  Você é informado a cada movimentação e decisão, acompanhando o recebimento de valores, alvarás ou expedição de contramandados.
                 </p>
               </div>
             </div>
 
             <div className="mt-12 text-center">
               <GlowingButton
-                href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de dar o primeiro passo e tirar dúvidas sobre meu caso.")}
+                href={getWhatsAppUrl("Olá, Dr. Ronaldo Giliard! Gostaria de dar o primeiro passo e tirar dúvidas sobre meu caso.")}
                 target="_blank"
-                variant="gold"
+                variant="navy"
                 size="lg"
               >
                 <WhatsAppIcon size={18} />
@@ -1701,12 +1643,12 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 8: FAQ — PERGUNTAS FREQUENTES                      */}
         {/* ======================================================== */}
-        <section id="duvidas" className="py-20 sm:py-26 bg-[#fcfbf9]">
+        <section id="duvidas" className="py-20 sm:py-26 bg-[#f8fafc]">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <Heading
                 eyebrow="Tire Suas Dúvidas"
-                description="Respostas diretas e esclarecedoras para as principais questões sobre causas trabalhistas, indenizações, contratos e direito de família."
+                description="Respostas diretas e esclarecedoras para as principais questões sobre defesa penal, causas cíveis, danos morais e direito de família."
               >
                 Perguntas Frequentes
               </Heading>
@@ -1723,11 +1665,11 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between p-5 text-left text-sm sm:text-base font-semibold text-[#0a0e17] transition-colors hover:text-[#9e7420] cursor-pointer"
+                      className="flex w-full items-center justify-between p-5 text-left text-sm sm:text-base font-semibold text-[#0b0f17] transition-colors hover:text-[#1c2e4d] cursor-pointer"
                     >
                       <span className="pr-4">{item.question}</span>
                       {isOpen ? (
-                        <ChevronUp size={18} className="shrink-0 text-[#c59b27]" />
+                        <ChevronUp size={18} className="shrink-0 text-[#1c2e4d]" />
                       ) : (
                         <ChevronDown size={18} className="shrink-0 text-slate-400" />
                       )}
@@ -1751,18 +1693,18 @@ export default function Home() {
               })}
             </div>
 
-            <div className="mt-10 rounded-xl border border-[#c59b27]/30 bg-[#fdf8eb] p-6 text-center">
-              <p className="text-sm font-bold text-[#8e6319]">
+            <div className="mt-10 rounded-xl border border-slate-300 bg-white p-6 text-center shadow-xs">
+              <p className="text-sm font-bold text-slate-900">
                 Tem uma dúvida específica sobre a sua situação?
               </p>
               <p className="mt-1 text-xs text-slate-600">
-                O Dr. Alexandre Abreu Lúcio está disponível para responder diretamente no WhatsApp.
+                O Dr. Ronaldo Giliard está disponível para responder diretamente no WhatsApp.
               </p>
               <div className="mt-4">
                 <GlowingButton
-                  href={getWhatsAppUrl("Olá, Dr. Alexandre! Gostaria de tirar uma dúvida pontual sobre o meu caso.")}
+                  href={getWhatsAppUrl("Olá, Dr. Ronaldo! Gostaria de tirar uma dúvida pontual sobre o meu caso.")}
                   target="_blank"
-                  variant="gold"
+                  variant="navy"
                   size="sm"
                 >
                   <WhatsAppIcon size={15} />
@@ -1776,14 +1718,14 @@ export default function Home() {
         {/* ======================================================== */}
         {/* DOBRA 9: SEDE, LOCALIZAÇÃO & CONTATO                     */}
         {/* ======================================================== */}
-        <section id="contato" className="py-20 sm:py-26 bg-[#0c121e] text-white">
+        <section id="contato" className="py-20 sm:py-26 bg-[#0b0f17] text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-14">
               {/* Contact Info Column */}
               <div className="lg:col-span-6">
                 <Heading
                   eyebrow="Onde Estamos & Contato"
-                  description="Venha nos visitar em nossa sede em Pitangui - MG ou converse agora mesmo pelo canal oficial de atendimento online."
+                  description="Venha nos visitar em nossa sede em Campo Belo - MG ou converse agora mesmo pelo canal oficial de atendimento online."
                   dark
                 >
                   Estamos Prontos para Atender Sua Demanda
@@ -1792,7 +1734,7 @@ export default function Home() {
                 <div className="mt-8 space-y-5 text-sm">
                   {/* Address */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#172136] text-[#f5de88]">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#141e33] text-white">
                       <MapPin size={20} />
                     </div>
                     <div>
@@ -1800,13 +1742,13 @@ export default function Home() {
                         Endereço / Sede Física
                       </p>
                       <p className="mt-1 text-slate-300">
-                        {ADDRESS_PITANGUI}
+                        {ADDRESS_CAMPO_BELO}
                       </p>
                       <a
                         href={GOOGLE_MAPS_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-[#f5de88] hover:underline"
+                        className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-slate-200 hover:text-white hover:underline"
                       >
                         <span>Traçar rota no Google Maps</span>
                         <ArrowUpRight size={13} />
@@ -1816,7 +1758,7 @@ export default function Home() {
 
                   {/* Phone / WhatsApp */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#172136] text-[#25D366]">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#141e33] text-white">
                       <WhatsAppIcon size={20} />
                     </div>
                     <div>
@@ -1827,10 +1769,10 @@ export default function Home() {
                         {PHONE_DISPLAY}
                       </p>
                       <a
-                        href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de agendar uma consulta.")}
+                        href={getWhatsAppUrl("Olá, Dr. Ronaldo Giliard! Gostaria de agendar uma consulta.")}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-[#25D366] hover:underline"
+                        className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-white hover:underline"
                       >
                         <span>Iniciar conversa direta no WhatsApp</span>
                         <ArrowUpRight size={13} />
@@ -1840,7 +1782,7 @@ export default function Home() {
 
                   {/* Hours */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#172136] text-[#f5de88]">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#141e33] text-white">
                       <Clock size={20} />
                     </div>
                     <div>
@@ -1848,17 +1790,17 @@ export default function Home() {
                         Horário de Funcionamento
                       </p>
                       <p className="mt-1 text-slate-300">
-                        Segunda a Sexta · 08:30 às 18:30 (Aberto · Fecha 18:30)
+                        Segunda a Sexta · 08:00 às 18:00 (Abre às 08:00)
                       </p>
                       <p className="text-[11px] text-slate-400">
-                        Atendimento presencial com agendamento prévio para seu conforto e total discrição.
+                        Plantão criminal 24 horas via WhatsApp para prisões em flagrante e custódia.
                       </p>
                     </div>
                   </div>
 
                   {/* Instagram */}
                   <div className="flex items-start gap-4">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#172136] text-[#f5de88]">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#141e33] text-white">
                       <InstagramIcon size={20} />
                     </div>
                     <div>
@@ -1870,10 +1812,10 @@ export default function Home() {
                           href={INSTAGRAM_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 font-semibold text-[#f5de88] hover:text-white"
+                          className="inline-flex items-center gap-1.5 font-semibold text-slate-200 hover:text-white"
                         >
                           <span>{INSTAGRAM_HANDLE}</span>
-                          <span className="text-[11px] text-slate-400">({INSTAGRAM_STATS} · Cível e Trabalhista)</span>
+                          <span className="text-[11px] text-slate-400">({INSTAGRAM_STATS} · Cível e Criminal)</span>
                         </a>
                       </div>
                     </div>
@@ -1883,24 +1825,24 @@ export default function Home() {
 
               {/* Map / Route Card */}
               <div className="lg:col-span-6 flex flex-col justify-center">
-                <div className="overflow-hidden rounded-2xl border border-[#172136] bg-[#121929] p-6 sm:p-8 shadow-xl">
+                <div className="overflow-hidden rounded-2xl border border-[#1e293b] bg-[#141e33] p-6 sm:p-8 shadow-xl">
                   <div className="flex items-center justify-between pb-4 border-b border-slate-700">
                     <div>
                       <h4 className="font-serif text-lg font-bold text-white">
-                        Escritório de Advocacia - Dr. Alexandre Abreu Lúcio
+                        Ronaldo Giliard Advocacia e Consultoria Jurídica
                       </h4>
-                      <p className="text-xs text-[#f5de88]">
-                        Praça Dr. Isauro Epifânio, 141 · Pitangui - MG
+                      <p className="text-xs text-slate-300">
+                        R. João Pinheiro, 356 · Centro, Campo Belo - MG
                       </p>
                     </div>
-                    <div className="flex items-center gap-1 rounded-md bg-[#0c121e] px-3 py-1 text-xs font-bold text-[#f59e0b]">
+                    <div className="flex items-center gap-1 rounded-md bg-[#0b0f17] px-3 py-1 text-xs font-bold text-[#f59e0b]">
                       <Star size={13} className="fill-[#f59e0b]" />
                       <span>5,0 ★</span>
                     </div>
                   </div>
 
                   <p className="mt-4 text-xs text-slate-300 leading-relaxed">
-                    Sede acolhedora no Bairro São Francisco em Pitangui - MG, com fácil acesso, estacionamento e sala de reuniões privativa para analisar sua demanda cível ou trabalhista com o rigor ético que seus direitos exigem.
+                    Sede moderna e privativa no Centro de Campo Belo - MG, preparada para acolher você e sua família com total discrição, comodidade e estrutura para análise aprofundada da sua causa cível ou criminal.
                   </p>
 
                   <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -1908,19 +1850,19 @@ export default function Home() {
                       href={GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c59b27] px-4 py-3 text-xs font-bold uppercase text-[#080c14] hover:bg-[#e8c55e] transition-colors"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-xs font-bold uppercase text-[#0b0f17] hover:bg-slate-200 transition-colors"
                     >
                       <MapPin size={16} />
                       <span>Abrir no Google Maps</span>
                     </a>
 
                     <a
-                      href={getWhatsAppUrl("Olá, Dr. Alexandre! Gostaria de agendar um horário presencial no escritório em Pitangui.")}
+                      href={getWhatsAppUrl("Olá, Dr. Ronaldo! Gostaria de agendar um horário presencial no escritório em Campo Belo.")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-[#0c121e] px-4 py-3 text-xs font-bold uppercase text-white hover:bg-slate-800 transition-colors"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-[#0b0f17] px-4 py-3 text-xs font-bold uppercase text-white hover:bg-slate-800 transition-colors"
                     >
-                      <WhatsAppIcon size={16} className="text-[#25D366]" />
+                      <WhatsAppIcon size={16} className="text-white" />
                       <span>Agendar Horário Presencial</span>
                     </a>
                   </div>
@@ -1933,20 +1875,21 @@ export default function Home() {
         {/* ======================================================== */}
         {/* FOOTER INSTITUCIONAL EM CONFORMIDADE COM A OAB           */}
         {/* ======================================================== */}
-        <footer className="border-t border-[#121929] bg-[#080c14] py-14 text-slate-400 text-xs">
+        <footer className="border-t border-[#1e293b] bg-[#06090e] py-14 text-slate-400 text-xs">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 pb-12 border-b border-slate-800/80">
               {/* Brand Column */}
               <div className="lg:col-span-1">
                 <Image
                   src={LOGO_WHITE_SRC}
-                  alt="Agenor Lucena Advocacia"
+                  alt="Ronaldo Giliard Advocacia e Consultoria Jurídica"
                   width={340}
                   height={170}
                   className="h-[56px] w-auto object-contain opacity-95"
+                  unoptimized
                 />
                 <p className="mt-4 text-xs text-slate-400 leading-relaxed">
-                  Advocacia especializada em Direito Cível e Trabalhista. Liderado pelo Dr. Alexandre Abreu Lúcio · OAB/MG 217.363, Presidente da Comissão da OAB Jovem de Pitangui - MG. Sede na Praça Dr. Isauro Epifânio, 141 e atendimento online para todo o Brasil.
+                  Advocacia especializada em Direito Cível e Criminal. Liderado pelo Dr. Ronaldo Giliard · OAB/MG 218.682, Bacharel pela PUC Minas Arcos. Sede na R. João Pinheiro, 356 - Centro, Campo Belo - MG, e atendimento digital em todo o Brasil.
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <a
@@ -1954,15 +1897,15 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
-                    aria-label="Instagram de Agenor Lucena Advocacia"
+                    aria-label="Instagram de Ronaldo Giliard Advocacia"
                   >
                     <InstagramIcon size={15} />
                   </a>
                   <a
-                    href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio!")}
+                    href={getWhatsAppUrl("Olá, Dr. Ronaldo Giliard!")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-[#25D366] hover:bg-slate-700 transition-colors"
+                    className="inline-flex size-8 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-slate-700 transition-colors"
                     aria-label="WhatsApp Oficial"
                   >
                     <WhatsAppIcon size={15} />
@@ -1992,12 +1935,12 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#sobre" className="hover:text-white transition-colors">
-                      Sobre Dr. Alexandre Lúcio
+                      Sobre Dr. Ronaldo Giliard
                     </a>
                   </li>
                   <li>
                     <a href="#diferenciais" className="hover:text-white transition-colors">
-                      Direito Explicado
+                      Speed in the Process
                     </a>
                   </li>
                   <li>
@@ -2012,7 +1955,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#contato" className="hover:text-white transition-colors">
-                      Sede em Pitangui - MG
+                      Sede em Campo Belo - MG
                     </a>
                   </li>
                 </ul>
@@ -2026,12 +1969,12 @@ export default function Home() {
                 <ul className="space-y-2">
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Direito do Trabalho & Rescisão
+                      Direito Criminal & Plantão 24h
                     </a>
                   </li>
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Horas Extras & Verbas Retidas
+                      Audiência de Custódia & Flagrante
                     </a>
                   </li>
                   <li>
@@ -2041,7 +1984,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a href="#servicos" className="hover:text-white transition-colors">
-                      Elaboração e Revisão de Contratos
+                      Consultoria Jurídica & Contratos
                     </a>
                   </li>
                   <li>
@@ -2064,20 +2007,20 @@ export default function Home() {
                 </p>
                 <ul className="space-y-2.5 text-xs">
                   <li className="flex items-start gap-2">
-                    <MapPin size={14} className="text-[#c59b27] shrink-0 mt-0.5" />
-                    <span>Praça Dr. Isauro Epifânio, 141 - Bairro São Francisco, Pitangui - MG</span>
+                    <MapPin size={14} className="text-slate-300 shrink-0 mt-0.5" />
+                    <span>R. João Pinheiro, 356 - Centro, Campo Belo - MG, 37270-000</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <WhatsAppIcon size={14} className="text-[#25D366] shrink-0" />
+                    <WhatsAppIcon size={14} className="text-white shrink-0" />
                     <span>{PHONE_DISPLAY}</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Clock size={14} className="text-[#c59b27] shrink-0" />
-                    <span>Seg. a Sex. · 08:30 às 18:30</span>
+                    <Clock size={14} className="text-slate-300 shrink-0" />
+                    <span>Seg. a Sex. · 08:00 às 18:00 (Plantão 24h)</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Star size={14} className="text-[#f59e0b] shrink-0 fill-[#f59e0b]" />
-                    <span>5,0 ★ no Google (39 avaliações)</span>
+                    <span>5,0 ★ no Google (35 avaliações)</span>
                   </li>
                 </ul>
               </div>
@@ -2086,28 +2029,28 @@ export default function Home() {
             {/* OAB Compliance Disclaimer */}
             <div className="pt-8 text-[11px] leading-relaxed text-slate-500">
               <p>
-                <strong>Aviso Legal & Ética Profissional da Advocacia:</strong> Este website tem caráter exclusivamente informativo e institucional, em estrita observância ao Código de Ética e Disciplina da Ordem dos Advogados do Brasil (OAB) e ao Provimento nº 205/2021 do Conselho Federal da OAB. As informações aqui prestadas não configuram promessa de resultado nem substituem a consulta jurídica individualizada com profissional devidamente inscrito na OAB. Dr. Alexandre Abreu Lúcio · OAB/MG 217.363.
+                <strong>Aviso Legal & Ética Profissional da Advocacia:</strong> Este website tem caráter estritamente informativo e institucional, em total conformidade com o Código de Ética e Disciplina da Ordem dos Advogados do Brasil (OAB) e com o Provimento nº 205/2021 do Conselho Federal da OAB. As informações disponibilizadas não configuram promessa de resultado nem substituem a consulta jurídica individualizada com profissional devidamente habilitado. Dr. Ronaldo Giliard · OAB/MG 218.682.
               </p>
               <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-600">
-                <p>© {new Date().getFullYear()} Agenor Lucena Advocacia. Todos os direitos reservados. Dr. Alexandre Abreu Lúcio · OAB/MG 217.363.</p>
-                <p>Pitangui - MG · Praça Dr. Isauro Epifânio, 141 · Atendimento Nacional</p>
+                <p>© {new Date().getFullYear()} Ronaldo Giliard Advocacia e Consultoria Jurídica. Todos os direitos reservados. OAB/MG 218.682.</p>
+                <p>Campo Belo - MG · R. João Pinheiro, 356 - Centro · Atendimento Nacional</p>
               </div>
             </div>
           </div>
         </footer>
 
         {/* ======================================================== */}
-        {/* BOTÃO FLUTUANTE DO WHATSAPP (CONVERSÃO ÁGIL E SUPORTE)   */}
+        {/* BOTÃO FLUTUANTE DO WHATSAPP (OXFORD NAVY COMBINANDO)     */}
         {/* ======================================================== */}
         <div className="fixed right-5 bottom-5 z-40 flex items-center gap-2.5">
           <a
-            href={getWhatsAppUrl("Olá, Dr. Alexandre Abreu Lúcio! Gostaria de tirar uma dúvida sobre o meu caso.")}
+            href={getWhatsAppUrl("Olá, Dr. Ronaldo Giliard! Gostaria de tirar uma dúvida sobre o meu caso pelo WhatsApp.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/40 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-[#25D366]/60 cursor-pointer"
-            aria-label="Converse pelo WhatsApp com o Dr. Alexandre Abreu Lúcio"
+            className="group relative flex size-14 items-center justify-center rounded-full bg-gradient-to-tr from-[#141f33] via-[#1c2e4d] to-[#263e68] text-white shadow-xl shadow-[#141f33]/45 border border-white/20 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-[#1c2e4d]/60 cursor-pointer"
+            aria-label="Converse pelo WhatsApp com o Dr. Ronaldo Giliard"
           >
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#25D366] opacity-30" />
+            <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#1c2e4d] opacity-35" />
             <WhatsAppIcon size={30} />
           </a>
         </div>

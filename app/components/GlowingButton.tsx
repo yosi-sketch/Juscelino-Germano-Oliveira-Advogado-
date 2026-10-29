@@ -10,13 +10,13 @@ interface GlowingButtonProps {
   className?: string;
   size?: "sm" | "md" | "lg";
   variant?:
-    | "gold"
+    | "navy"
     | "platinum"
+    | "silver"
     | "dark"
     | "outline"
-    | "champagne"
-    | "white"
-    | "emerald";
+    | "light"
+    | "white";
 }
 
 export default function GlowingButton({
@@ -26,7 +26,7 @@ export default function GlowingButton({
   onClick,
   className = "",
   size = "md",
-  variant = "gold",
+  variant = "navy",
 }: GlowingButtonProps) {
   const sizeClasses = {
     sm: "px-5 py-2.5 text-[10px] tracking-[0.14em]",
@@ -34,23 +34,23 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
-  // Visual identity based on Agenor Lucena Advocacia (AL)
-  // Imperial Warm Gold, Obsidian Midnight & Warm Linen Sand
+  // Visual identity based on Ronaldo Giliard Advocacia
+  // Deep Oxford Navy (matching Dr. Ronaldo's tie), Polished Platinum & Charcoal Slate
   const variantClasses = {
-    gold:
-      "border border-[#fdf8eb]/80 bg-gradient-to-r from-[#9e7420] via-[#f5de88] to-[#b88d22] text-[#080c14] font-black shadow-md shadow-[#9e7420]/30 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-4px_rgba(245,222,136,0.55)]",
+    navy:
+      "border border-white/25 bg-gradient-to-r from-[#141f33] via-[#1c2e4d] to-[#263e68] text-white font-black shadow-lg shadow-[#141f33]/35 hover:-translate-y-0.5 hover:brightness-110 hover:border-white/50 hover:shadow-[0_12px_30px_-4px_rgba(28,46,77,0.55)]",
     platinum:
-      "border border-[#f8fafc] bg-gradient-to-r from-[#e2e8f0] via-[#ffffff] to-[#cbd5e1] text-[#080c14] font-black shadow-md shadow-slate-400/25 hover:-translate-y-0.5 hover:brightness-105",
+      "border border-white/80 bg-gradient-to-r from-[#cbd5e1] via-[#ffffff] to-[#cbd5e1] text-[#06090e] font-black shadow-md shadow-white/20 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_-4px_rgba(255,255,255,0.4)]",
+    silver:
+      "border border-[#cbd5e1] bg-gradient-to-r from-[#94a3b8] via-[#e2e8f0] to-[#94a3b8] text-[#06090e] font-black shadow-md shadow-slate-400/25 hover:-translate-y-0.5 hover:brightness-105",
     dark:
-      "border border-[#c59b27]/50 bg-[#0c121e] text-[#f8fafc] font-bold shadow-md hover:-translate-y-0.5 hover:border-[#f5de88] hover:bg-[#172136] hover:text-white",
+      "border border-white/20 bg-[#0f172a] text-[#f8fafc] font-bold shadow-md hover:-translate-y-0.5 hover:border-white/50 hover:bg-[#1e293b] hover:text-white",
     outline:
-      "border border-[#c59b27]/70 bg-transparent text-[#f8fafc] font-bold hover:-translate-y-0.5 hover:border-[#f5de88] hover:bg-[#c59b27]/10 hover:text-white",
-    champagne:
-      "border border-[#e6dfd1] bg-[#fcfbf9] text-[#0a0e17] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-white hover:border-[#c59b27]",
+      "border border-[#263e68] bg-transparent text-[#141f33] font-bold hover:-translate-y-0.5 hover:border-[#1c2e4d] hover:bg-[#1c2e4d]/10",
+    light:
+      "border border-[#e2e8f0] bg-[#f8fafc] text-[#0b0f17] font-bold shadow-xs hover:-translate-y-0.5 hover:bg-white hover:border-[#94a3b8]",
     white:
-      "border border-slate-200 bg-white text-[#0a0e17] font-bold shadow-xs hover:-translate-y-0.5 hover:border-[#c59b27] hover:text-black",
-    emerald:
-      "border border-[#25D366] bg-gradient-to-r from-[#1ea952] to-[#25D366] text-white font-black shadow-md shadow-[#25D366]/30 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_28px_-4px_rgba(37,211,102,0.45)]",
+      "border border-slate-200 bg-white text-[#0b0f17] font-bold shadow-xs hover:-translate-y-0.5 hover:border-[#64748b] hover:text-black",
   }[variant];
 
   const classes =

@@ -28,68 +28,69 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0c121e",
+  themeColor: "#0b0f17",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://agenorlucena.adv.br"),
+  metadataBase: new URL("https://giliardadv.com.br"),
   title:
-    "Agenor Lucena Advocacia | Cível & Trabalhista · Dr. Alexandre Abreu Lúcio · 5,0 ★ (39 avaliações) · Pitangui - MG",
+    "Ronaldo Giliard Advocacia e Consultoria Jurídica | Cível & Criminal · Dr. Ronaldo Giliard · OAB/MG 218.682 · 5,0 ★ (35 avaliações) · Campo Belo - MG",
   description:
-    "Agenor Lucena Advocacia — Liderado pelo Dr. Alexandre Abreu Lúcio (OAB/MG 217.363), Presidente da Comissão da OAB Jovem de Pitangui. Especialista em Direito Cível e Trabalhista, com foco em Direito Explicado, transparente e resolutivo. Sede na Praça Dr. Isauro Epifânio, 141, Bairro São Francisco, Pitangui - MG. Atendimento presencial e online nacional. WhatsApp: (37) 99971-0510.",
+    "Ronaldo Giliard Advocacia e Consultoria Jurídica — Liderado pelo Dr. Ronaldo Giliard (OAB/MG 218.682), Bacharel em Direito pela PUC Minas Arcos-MG. Atuação de excelência e alta agilidade em Direito Cível, Defesa Criminal e Consultoria Jurídica. Sede na R. João Pinheiro, 356 - Centro, Campo Belo - MG. Atendimento presencial e online em todo o Brasil. WhatsApp: (35) 99745-8013.",
   keywords: [
-    "Agenor Lucena Advocacia",
-    "Agenor Lucena",
-    "Dr Alexandre Abreu Lucio",
-    "Alexandre Abreu Lucio Advogado",
-    "Advogado em Pitangui MG",
-    "Advocacia Pitangui Minas Gerais",
-    "Advogado Trabalhista Pitangui",
-    "Advogado Cível Pitangui",
-    "Direito do Trabalho Pitangui",
-    "Rescisão Indireta e Horas Extras Pitangui",
-    "Indenização e Danos Morais Pitangui",
-    "Direito de Família Pitangui",
-    "Inventário em Cartório Pitangui",
-    "Contratos Pitangui MG",
-    "Presidente OAB Jovem Pitangui",
-    "OAB MG 217363",
-    "Direito Explicado Pitangui",
+    "Ronaldo Giliard Advocacia",
+    "Ronaldo Giliard",
+    "Dr Ronaldo Giliard",
+    "Ronaldo Giliard Advogado",
+    "Advogado em Campo Belo MG",
+    "Advocacia Campo Belo Minas Gerais",
+    "Advogado Criminalista Campo Belo",
+    "Advogado Cível Campo Belo",
+    "Direito Penal Campo Belo",
+    "Defesa Criminal Campo Belo",
+    "Flagrante e Audiência de Custódia Campo Belo",
+    "Indenização e Danos Morais Campo Belo",
+    "Direito de Família e Divórcio Campo Belo",
+    "Inventário em Cartório Campo Belo",
+    "Consultoria Jurídica Campo Belo MG",
+    "OAB MG 218682",
+    "PUC Minas Arcos Direito",
+    "Melhor Advogado Campo Belo",
     "Advocacia online Minas Gerais e Brasil",
   ],
-  authors: [{ name: "Agenor Lucena Advocacia - Dr. Alexandre Abreu Lúcio" }],
-  creator: "Agenor Lucena Advocacia",
-  publisher: "Agenor Lucena Advocacia",
+  authors: [{ name: "Ronaldo Giliard Advocacia e Consultoria Jurídica - Dr. Ronaldo Giliard" }],
+  creator: "Ronaldo Giliard Advocacia",
+  publisher: "Ronaldo Giliard Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=al1", sizes: "any" },
-      { url: "/icon-32x32.png?v=al1", type: "image/png", sizes: "32x32" },
-      { url: "/icon-16x16.png?v=al1", type: "image/png", sizes: "16x16" },
-      { url: "/icon-48x48.png?v=al1", type: "image/png", sizes: "48x48" },
-      { url: "/icon.png?v=al1", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=rg1", sizes: "any" },
+      { url: "/icon-32x32.png?v=rg1", type: "image/png", sizes: "32x32" },
+      { url: "/icon-16x16.png?v=rg1", type: "image/png", sizes: "16x16" },
+      { url: "/icon-48x48.png?v=rg1", type: "image/png", sizes: "48x48" },
+      { url: "/icon.png?v=rg1", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/icon-32x32.png?v=al1",
-    apple: [{ url: "/apple-icon.png?v=al1", sizes: "180x180" }],
+    shortcut: "/icon-32x32.png?v=rg1",
+    apple: [{ url: "/apple-icon.png?v=rg1", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://agenorlucena.adv.br",
+    url: "https://giliardadv.com.br",
     title:
-      "Agenor Lucena Advocacia | Cível & Trabalhista · Dr. Alexandre Abreu Lúcio · 5,0 ★ (39 avaliações)",
+      "Ronaldo Giliard Advocacia e Consultoria Jurídica | Cível & Criminal · 5,0 ★ (35 avaliações)",
     description:
-      "Defesa estratégica nas áreas Cível e Trabalhista com o conceito de Direito Explicado. Liderado pelo Dr. Alexandre Abreu Lúcio (OAB/MG 217.363), Presidente da Comissão da OAB Jovem de Pitangui - MG. WhatsApp: (37) 99971-0510.",
-    siteName: "Agenor Lucena Advocacia",
+      "Defesa jurídica estratégica, ágil e resolutiva em Direito Cível e Criminal. Dr. Ronaldo Giliard (OAB/MG 218.682). Sede em Campo Belo - MG e atendimento digital nacional. WhatsApp: (35) 99745-8013.",
+    siteName: "Ronaldo Giliard Advocacia",
     images: [
       {
         url: "/logo.png",
         width: 1024,
         height: 512,
-        alt: "Agenor Lucena Advocacia — Cível e Trabalhista",
+        alt: "Ronaldo Giliard Advocacia e Consultoria Jurídica — Cível e Criminal",
       },
     ],
   },
@@ -103,33 +104,36 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Agenor Lucena Advocacia - Dr. Alexandre Abreu Lúcio",
-    alternateName: "Dr. Alexandre Abreu Lúcio Advocacia | Agenor Lucena Advocacia Cível e Trabalhista",
-    telephone: "+55-37-99971-0510",
-    url: "https://agenorlucena.adv.br",
-    image: "https://agenorlucena.adv.br/logo.png",
+    name: "Ronaldo Giliard Advocacia e Consultoria Jurídica - Dr. Ronaldo Giliard",
+    alternateName: "Dr. Ronaldo Giliard Advogado | Ronaldo Giliard Advocacia Cível e Criminal",
+    telephone: "+55-35-99745-8013",
+    url: "https://giliardadv.com.br",
+    image: "https://giliardadv.com.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Praça Dr. Isauro Epifânio, 141 - Bairro São Francisco",
-      addressLocality: "Pitangui",
+      streetAddress: "R. João Pinheiro, 356 - Centro",
+      addressLocality: "Campo Belo",
       addressRegion: "MG",
-      postalCode: "35650-000",
+      postalCode: "37270-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "39",
+      reviewCount: "35",
     },
     areaServed: [
-      "Pitangui",
-      "Conceição do Pará",
-      "Nova Serrana",
-      "Pará de Minas",
-      "Leandro Ferreira",
-      "Martinho Campos",
-      "Divinópolis",
+      "Campo Belo",
+      "Candeias",
+      "Cristais",
+      "Santana do Jacaré",
+      "Aguanil",
+      "Perdões",
+      "Boa Esperança",
+      "Lavras",
+      "Formiga",
+      "Arcos",
       "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
@@ -144,14 +148,14 @@ export default function RootLayout({
           "Thursday",
           "Friday",
         ],
-        opens: "08:30",
-        closes: "18:30",
+        opens: "08:00",
+        closes: "18:00",
       },
     ],
     sameAs: [
-      "https://wa.me/5537999710510",
-      "https://www.instagram.com/agenor_lucena/",
-      "https://www.google.com/search?q=Alexandre+Abreu+L%C3%BAcio+%E2%80%94+Advocacia%0APitangui+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
+      "https://wa.me/5535997458013",
+      "https://www.instagram.com/giliardadv/",
+      "https://www.google.com/search?q=Ronaldo+Giliard+Advocacia+e+Consultoria+Jur%C3%ADdica%0ACampo+Belo+%C2%B7+MG&sourceid=chrome&ie=UTF-8#",
     ],
   };
 
@@ -162,19 +166,19 @@ export default function RootLayout({
     >
       <head>
         {/* Favicon & Web App Icons with Cache Busting */}
-        <link rel="icon" href="/favicon.ico?v=al1" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=al1" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=al1" />
-        <link rel="icon" type="image/png" sizes="48x48" href="/icon-48x48.png?v=al1" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/icon.png?v=al1" />
-        <link rel="shortcut icon" href="/favicon.ico?v=al1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=al1" />
+        <link rel="icon" href="/favicon.ico?v=rg1" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png?v=rg1" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png?v=rg1" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/icon-48x48.png?v=rg1" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon.png?v=rg1" />
+        <link rel="shortcut icon" href="/favicon.ico?v=rg1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=rg1" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased min-h-screen selection:bg-[#c59b27] selection:text-[#080c14] bg-[#fcfbf9] text-[#0a0e17]">
+      <body className="antialiased min-h-screen selection:bg-[#0f172a] selection:text-[#ffffff] bg-[#f8fafc] text-[#0b0f17]">
         {children}
       </body>
     </html>
